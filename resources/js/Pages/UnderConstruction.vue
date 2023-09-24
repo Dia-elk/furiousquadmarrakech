@@ -66,7 +66,7 @@
         </div>
         <div class="md:hidden h-screen flex justify-center items-center relative">
             <div class="absolute top-0 w-full h-full"> <img src="images/underConstructionBg.jpg" class="h-full w-full object-cover"></div>
-            <div class="flex flex-col  bg-[#050403]/40 h-full justify-center z-40">
+            <div class="flex flex-col  bg-[#050403]/40 h-full justify-center z-10">
 
                 <div class="px-6 mb-6">
                     <h1 class="font-bold font-roboto text-white text-4xl mb-4">We're coming soon!</h1>
