@@ -12,7 +12,7 @@
                 <div class="w-full h-full bg-gradient-to-r from-[#050403]/0 to-[#050403] absolute top-0"></div>
             </div>
 
-            <div class="flex flex-col items-center bg-[#050403] h-full justify-center ">
+            <div class="flex flex-col bg-[#050403] h-full justify-center ">
 
                 <div class="w-[400px] mb-6">
                     <h1 class="font-bold font-roboto text-white text-4xl mb-4">We're coming soon!</h1>
@@ -59,7 +59,7 @@
 
             </div>
         </div>
-        <div class="block md:hidden h-screen flex justify-center items-center  bg-[url('images/underConstructionBg.jpg')] bg-cover bg-center">
+        <div class="md:hidden h-screen flex justify-center items-center  bg-[url('images/underConstructionBg.jpg')] bg-cover bg-center">
             <div class="flex flex-col  bg-[#050403]/40 h-full justify-center ">
 
                 <div class="px-6 mb-6">
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- Forum-->
-                <div v-if="!isSubscribed" class="flex justify-center">
+                <div v-if="!isSubscribed" class="px-6">
                     <form class="flex" @submit.prevent="form.post(route('subscriber.store'))">
                         <input v-model="form.email" type="email"
                                class="h-10 w-[200px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300 text-sm"
