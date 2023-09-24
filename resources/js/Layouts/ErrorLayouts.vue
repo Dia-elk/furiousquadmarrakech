@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen relative">
-        <Link :href="route('underConstruction')" class="absolute top-0 p-4 z-40 w-full ">
+        <Link :href="route('welcome')" class="absolute top-0 p-4 z-40 w-full ">
             <UnderConstructionLogo/>
         </Link>
         <div class=" hidden md:grid grid-cols-2 h-full">

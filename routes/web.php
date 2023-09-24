@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -17,15 +16,6 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('UnderConstruction' ,[
-        'isSubscribed' => false,
-    ]);
-})->name('underConstruction');
+    return Inertia::render('Welcome');
+})->name('welcome');
 
-Route::get('/subscribed', function () {
-    return Inertia::render('UnderConstruction' ,[
-        'isSubscribed' => true,
-    ]);
-})->name('underConstruction.subscribed');
-
-Route::resource('subscriber',\App\Http\Controllers\SubscriberController::class)->only('store');
