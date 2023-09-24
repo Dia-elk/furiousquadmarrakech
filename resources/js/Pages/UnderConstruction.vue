@@ -22,15 +22,20 @@
 
                 <!-- Forum-->
                 <div v-if="!isSubscribed">
-                    <form class="flex" @submit.prevent="form.post(route('subscriber.store'))">
-                        <input v-model="form.email" type="email"
-                               class="h-12 w-[400px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300"
-                               placeholder="name@furiousquadmarrakech.com" required>
-                        <button class="bg-[#c10c10]  h-12 px-6 flex justify-center items-center"
-                                :disabled="form.processing" type="submit">
-                            <p v-if="!form.processing" class="font-bold text-white text-sm">NOTIFY US</p>
-                            <Spinner v-if="form.processing"/>
-                        </button>
+                    <form  @submit.prevent="form.post(route('subscriber.store'))">
+                      <div class="flex">
+                          <input v-model="form.email" type="email"
+                                 class="h-12 w-[400px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300"
+                                 placeholder="name@furiousquadmarrakech.com" required>
+
+                          <button class="bg-[#c10c10]  h-12 px-6 flex justify-center items-center"
+                                  :disabled="form.processing" type="submit">
+                              <p v-if="!form.processing" class="font-bold text-white text-sm">NOTIFY US</p>
+                              <Spinner v-if="form.processing"/>
+                          </button>
+                      </div>
+                        <p v-if="errors.email" class="text-[#c10c10] text-sm">{{errors.email}}</p>
+                        <p v-if="isSubscribed" class="text-[#c10c10] text-sm">You are already subscribed. Thank you for trying again</p>
                     </form>
                 </div>
                 <div class="font-light font-roboto text-gray-300 text-sm mt-6">
@@ -124,6 +129,7 @@ import Spinner from "@/Components/Spinner.vue";
 
 defineProps({
     isSubscribed: Boolean,
+    errors : Object,
 })
 const form = useForm({
     email: ref(''),
