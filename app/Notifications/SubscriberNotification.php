@@ -10,7 +10,9 @@ use Illuminate\Notifications\Notification;
 class SubscriberNotification extends Notification
 {
     use Queueable;
-private $email;
+
+    private $email;
+
     /**
      * Create a new notification instance.
      */
@@ -35,7 +37,12 @@ private $email;
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage)
-                    ->content('New Subscriber: '.$this->email);
+            ->content('
+🎉 Congratulations 🎉
+You have a new subscriber to Furious Quad Marrakech! 🚀
+
+Subscriber Email: '.$this->email
+);
     }
 
     /**
