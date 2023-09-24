@@ -38,7 +38,7 @@
         </div>
 
         <div class="md:hidden h-screen flex justify-center items-center  bg-[url('images/underConstructionBg.jpg')] bg-cover bg-center">
-            <div class="flex flex-col  bg-[#050403]/40 h-full justify-center ">
+            <div class="flex flex-col  bg-[#050403]/40 h-full w-full  items-center justify-center ">
 
                 <div class="px-6 mb-6">
                     <h1 class="font-bold font-roboto text-white text-4xl mb-4">{{title}}</h1>
