@@ -37,9 +37,9 @@
             </div>
         </div>
 
-        <div class="md:hidden h-screen flex justify-center items-center  bg-[url('images/underConstructionBg.jpg')] bg-cover bg-center">
-            <div class="flex flex-col  bg-[#050403]/40 h-full w-full  items-center justify-center ">
-
+        <div class="md:hidden h-screen flex justify-center items-center relative">
+            <div class="absolute top-0 w-full h-full"> <img src="images/underConstructionBg.jpg" class="h-full w-full object-cover"></div>
+            <div class="flex flex-col  bg-[#050403]/40 h-full w-full  items-center justify-center z-40">
                 <div class="px-6 mb-6">
                     <h1 class="font-bold font-roboto text-white text-4xl mb-4">{{title}}</h1>
                     <p class="font-light font-roboto text-gray-300 text-sm">{{message}}</p>
