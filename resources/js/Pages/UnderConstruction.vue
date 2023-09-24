@@ -8,7 +8,7 @@
         </div>
         <div class=" hidden md:grid grid-cols-2 h-full">
             <div class="relative">
-                <div class="bg-[url('images/underConstructionBg.jpg')]  w-full h-full bg-cover bg-center"></div>
+                <div class="w-full h-full"><img src="images/underConstructionBg.jpg" class="h-screen w-full object-cover" alt="two in motocross"></div>
                 <div class="w-full h-full bg-gradient-to-r from-[#050403]/0 to-[#050403] absolute top-0"></div>
             </div>
 
