@@ -12,7 +12,14 @@ export default {
 
     theme: {
         extend: {
+            color: {
+                'primary': '#c10c10',
+                'secondary': '#484746',
+                'light' : '#f5f4f3',
+                'dark' : '#050403',
+            },
             fontFamily: {
+                roboto: 'Roboto Flex',
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
