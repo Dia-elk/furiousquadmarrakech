@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSubscriberRequest;
 use App\Models\Subscriber;
+use App\Notifications\SubscriberNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
 
 class SubscriberController extends Controller
@@ -30,11 +32,11 @@ class SubscriberController extends Controller
      */
     public function store(StoreSubscriberRequest $request)
     {
-        sleep(2);
 
         if(!count(Subscriber::where('email' , $request->email)->get()))
         {
-            Subscriber::create($request->validated());
+            $subscriber = Subscriber::create($request->validated());
+            Notification::route('slack' ,config('services.slack.subscribers_channel'))->notify(new SubscriberNotification($subscriber->email));
             return to_route('underConstruction.subscribed');
         }
 
