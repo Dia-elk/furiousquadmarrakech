@@ -38,7 +38,7 @@ class SubscriberController extends Controller
             return to_route('underConstruction.subscribed');
         }
 
-        return to_route('');
+         abort('409');
     }
 
     /**
