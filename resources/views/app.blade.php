@@ -6,18 +6,20 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('fonts.css') }}">
+
 
         <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased bg-[#050403]">
+    <body class="font-tactic antialiased bg-[#050403]">
         @inertia
     </body>
 </html>
