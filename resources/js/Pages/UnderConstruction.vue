@@ -3,7 +3,7 @@
         <title>Under construction</title>
     </Head>
     <div class="h-screen relative">
-        <div class="absolute top-0 p-4 z-40 w-full ">
+        <div class="absolute md:block flex justify-center top-0 p-4 z-40 w-full ">
             <UnderConstructionLogo/>
         </div>
         <div class=" hidden md:grid grid-cols-2 h-full">
@@ -75,14 +75,14 @@
                 </div>
 
                 <!-- Forum-->
-                <div v-if="!isSubscribed" class="px-6">
-                    <form class="flex" @submit.prevent="form.post(route('subscriber.store'))">
+                <div v-if="!isSubscribed" class="">
+                    <form class="flex justify-center" @submit.prevent="form.post(route('subscriber.store'))">
                         <input v-model="form.email" type="email"
                                class="h-10 w-[250px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300 text-xs"
                                placeholder="name@furiousquadm.com" required>
-                        <button class="bg-[#c10c10]  h-10 px-6 flex justify-center items-center"
+                        <button class="bg-[#c10c10]  h-10 w-20 flex justify-center items-center"
                                 :disabled="form.processing" type="submit">
-                            <p v-if="!form.processing" class="font-bold text-white text-xs">NOTIFY US</p>
+                            <p v-if="!form.processing" class="font-semibold text-white text-xs">NOTIFY US</p>
                             <Spinner v-if="form.processing"/>
                         </button>
                     </form>
