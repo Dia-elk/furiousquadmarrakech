@@ -15,8 +15,8 @@
             <div class="flex flex-col bg-[#050403] h-full justify-center ">
 
                 <div class="w-[400px] mb-6">
-                    <h1 class="font-bold font-roboto text-white text-4xl mb-4">We're coming soon!</h1>
-                    <p class="font-light font-roboto text-gray-300 text-sm">Our website is currently undergoing
+                    <h1 class="font-bold  text-white text-4xl mb-4">We're coming soon!</h1>
+                    <p class="font-light  text-gray-300 text-sm">Our website is currently undergoing
                         scheduled maintenance. We should be back shortly. Thank you for your patience.</p>
                 </div>
 
@@ -38,7 +38,7 @@
                         <p v-if="isSubscribed" class="text-[#c10c10] text-sm">You are already subscribed. Thank you for trying again</p>
                     </form>
                 </div>
-                <div class="font-light font-roboto text-gray-300 text-sm mt-6">
+                <div class="font-light  text-gray-300 text-sm mt-6">
                     <p v-if="$page.url === '/'"> Sign up now to get early notification of our launch date!</p>
                     <p v-if="$page.url === '/subscribed'"> 🌟 Thank you for subscribing! 🌟</p>
                 </div>
@@ -69,8 +69,8 @@
             <div class="flex flex-col  bg-[#050403]/40 h-full justify-center z-10">
 
                 <div class="px-6 mb-6">
-                    <h1 class="font-bold font-roboto text-white text-4xl mb-4">We're coming soon!</h1>
-                    <p class="font-light font-roboto text-gray-300 text-sm">Our website is currently undergoing
+                    <h1 class="font-bold  text-white text-4xl mb-4">We're coming soon!</h1>
+                    <p class="font-light  text-gray-300 text-sm">Our website is currently undergoing
                         scheduled maintenance. We should be back shortly. Thank you for your patience.</p>
                 </div>
 
@@ -78,8 +78,8 @@
                 <div v-if="!isSubscribed" class="px-6">
                     <form class="flex" @submit.prevent="form.post(route('subscriber.store'))">
                         <input v-model="form.email" type="email"
-                               class="h-10 w-[200px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300 text-sm"
-                               placeholder="name@furiousquadmarrakech.com" required>
+                               class="h-10 w-[250px] focus:ring-[#c10c10] focus:border-[#c10c10] bg-neutral-800 text-white placeholder-gray-300 text-xs"
+                               placeholder="name@furiousquadm.com" required>
                         <button class="bg-[#c10c10]  h-10 px-6 flex justify-center items-center"
                                 :disabled="form.processing" type="submit">
                             <p v-if="!form.processing" class="font-bold text-white text-xs">NOTIFY US</p>
@@ -87,7 +87,7 @@
                         </button>
                     </form>
                 </div>
-                <div class="font-light px-6 font-roboto text-gray-300 text-sm mt-6">
+                <div class="font-light px-6  text-gray-300 text-sm mt-6">
                     <p v-if="$page.url === '/'"> Sign up now to get early notification of our launch date!</p>
                     <p v-if="$page.url === '/subscribed'"> 🌟 Thank you for subscribing! 🌟</p>
                 </div>
