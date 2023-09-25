@@ -20,6 +20,7 @@ export default {
             },
             fontFamily: {
                 roboto: 'Roboto Flex',
+                tactic : 'Tactic sans',
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
