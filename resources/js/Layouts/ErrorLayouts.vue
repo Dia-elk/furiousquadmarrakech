@@ -11,9 +11,9 @@
 
             <div class="flex flex-col bg-[#050403] h-full justify-center ">
 
-                <div class="w-[400px] mb-6">
-                    <h1 class="font-bold font-roboto text-white text-4xl mb-4">{{title}}</h1>
-                    <p class="font-light font-roboto text-gray-300 text-sm">{{message}}</p>
+                <div class=" mb-6">
+                    <h1 class="font-bold   text-white text-4xl mb-4">{{title}}</h1>
+                    <p class="font-light  text-gray-300 text-sm">{{message}}</p>
                 </div>
 
 
