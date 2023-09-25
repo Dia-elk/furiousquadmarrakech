@@ -41,8 +41,8 @@
             <div class="absolute top-0 w-full h-full"> <img src="images/underConstructionBg.jpg" class="h-full w-full object-cover"></div>
             <div class="flex flex-col  bg-[#050403]/40 h-full w-full  items-center justify-center z-10">
                 <div class="px-6 mb-6">
-                    <h1 class="font-bold font-roboto text-white text-4xl mb-4">{{title}}</h1>
-                    <p class="font-light font-roboto text-gray-300 text-sm">{{message}}</p>
+                    <h1 class="font-bold  text-white text-4xl mb-4">{{title}}</h1>
+                    <p class="font-light  text-gray-300 text-sm">{{message}}</p>
                 </div>
 
                 <!-- Social media -->
