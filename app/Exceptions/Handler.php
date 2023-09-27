@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Inertia\Inertia;
 use Throwable;
+use Vonage\Response;
 
 class Handler extends ExceptionHandler
 {
@@ -12,9 +13,9 @@ class Handler extends ExceptionHandler
      * Prepare exception for rendering.
      *
      * @param  \Throwable  $e
-     * @return \Throwable
+     * @return \Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function render($request, Throwable $e)
+    public function render($request, Throwable $e) : Response
     {
         $response = parent::render($request, $e);
 
