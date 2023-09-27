@@ -7,10 +7,10 @@
     </main>
     <footer class="h-[100px] flex justify-between items-center p-10 border-t-[0.6px] border-gray-600 mx-6 lg:mx-auto lg:max-w-7xl">
         <div>
-            <span class="text-gray-500 lg:text-[10px] text-[8px]">© {{date.getFullYear()}} Furious Quad Marrakech - Made with <span
+            <span class="text-gray-500 lg:text-[12px] text-[10px]">© {{date.getFullYear()}} Furious Quad Marrakech - Made with <span
                 class="text-[#c10c10]">♥</span> by </span>
-            <span class="text-gray-200 lg:text-[10px] text-[8px] font-medium underline cursor-pointer">
-                <a href="https://diaelk.dev/" target="_blank">Dia elk</a>
+            <span class="text-gray-200 lg:text-[12px] text-[8px] font-bold underline cursor-pointer">
+                <a href="https://diaelk.dev/" target="_blank">Dia</a>
             </span>
         </div>
         <div class="flex gap-4">

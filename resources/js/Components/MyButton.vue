@@ -66,7 +66,7 @@ function updatePosition(event) {
     content: '';
     position: absolute;
     background-color: black;
-    opacity: 0.1;
+    opacity: 0.4;
     width: 0;
     height: 0;
     left: v-bind(--xPos);
