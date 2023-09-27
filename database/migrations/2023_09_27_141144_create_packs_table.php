@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\Vehicle::class,'vehicle_id')->constrained('vehicles');
             $table->string('duration');
+            $table->double('price');
             $table->string('name');
             $table->boolean('dinner')->default(false);
             $table->boolean('pictures')->default(false);

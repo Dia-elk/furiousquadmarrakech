@@ -8,7 +8,9 @@
                     Furious Adventure That's Right for You! Dive into the world of adrenaline-pumping off-road
                     experiences and select the perfect adventure that electrifies your senses.</p>
                 <div class="flex justify-center gap-4 mt-10">
-                    <MyButton>Plan your Ride</MyButton>
+                    <div class="w-[300px]">
+                        <MyButton>Plan your Ride</MyButton>
+                    </div>
                 </div>
             </div>
 

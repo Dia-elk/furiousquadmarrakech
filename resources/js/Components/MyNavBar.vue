@@ -5,22 +5,22 @@
             <BlackLogo v-if="isOpen"/>
         </Link>
         <div class="hidden lg:flex gap-10 items-center ">
-            <MyNavLink :is-active="true" :href="route('welcome')">
+            <MyNavLink :is-active="$page.url === '/'" :href="route('welcome')">
                 Home
             </MyNavLink>
-            <MyNavLink>
+            <MyNavLink :is-active="$page.url.startsWith('/buggy')" :href="route('buggy')">
                 Buggy
             </MyNavLink>
-            <MyNavLink :is-active="false" :href="route('welcome')">
+            <MyNavLink :is-active="$page.url.startsWith('/quad')" :href="route('quad')">
                 Quad
             </MyNavLink>
-            <MyNavLink :is-active="false" :href="route('welcome')">
+            <MyNavLink :is-active="$page.url.startsWith('/motocross')" :href="route('motocross')">
                 Motocross
             </MyNavLink>
-            <MyNavLink :is-active="false" :href="route('welcome')">
+            <MyNavLink :is-active="$page.url.startsWith('/furious')" :href="route('furious')">
                 Furious
             </MyNavLink>
-            <MyNavLink :is-active="false" :href="route('welcome')">
+            <MyNavLink :is-active="$page.url.startsWith('/contact')" :href="route('contact')">
                 Contact
             </MyNavLink>
             <BtnNavLink :href="route('welcome')">
@@ -42,12 +42,12 @@
             <div class="flex flex-col h-screen justify-end pb-10 items-center w-full">
 
                 <div class="flex flex-col space-y-10 items-center">
-                    <MyNavLink :href="route('welcome')" :is-active="true" >Home</MyNavLink>
-                    <MyNavLink :href="route('welcome')" :is-active="false" >Buggy</MyNavLink>
-                    <MyNavLink :href="route('welcome')" :is-active="false" >Quad</MyNavLink>
-                    <MyNavLink :href="route('welcome')" :is-active="false" >Motocross</MyNavLink>
-                    <MyNavLink :href="route('welcome')" :is-active="false" >Furious</MyNavLink>
-                    <MyNavLink :href="route('welcome')" :is-active="false" >Contact</MyNavLink>
+                    <MyNavLink :href="route('welcome')" :is-active="$page.url === '/'" >Home</MyNavLink>
+                    <MyNavLink :href="route('buggy')" :is-active="$page.url.startsWith('/buggy')" >Buggy</MyNavLink>
+                    <MyNavLink :href="route('quad')" :is-active="$page.url.startsWith('/quad')" >Quad</MyNavLink>
+                    <MyNavLink :href="route('motocross')" :is-active="$page.url.startsWith('/motocross')" >Motocross</MyNavLink>
+                    <MyNavLink :href="route('furious')" :is-active="$page.url.startsWith('/furious')" >Furious</MyNavLink>
+                    <MyNavLink :href="route('contact')" :is-active="$page.url.startsWith('/contact')" >Contact</MyNavLink>
                     <BtnNavLink>Book</BtnNavLink>
                 </div>
 

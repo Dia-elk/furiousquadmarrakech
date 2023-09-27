@@ -15,6 +15,7 @@ class Pack extends Model
     protected $fillable = [
         'vehicle_id',
         'duration',
+        'price',
         'name',
         'dinner',
         'pictures',

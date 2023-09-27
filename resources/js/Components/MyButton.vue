@@ -7,7 +7,7 @@
 
 transition-all duration-500
     h-[46px]
-    w-[200px]
+    w-full
 
     border
     border-[#c10c10]
