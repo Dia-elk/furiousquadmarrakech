@@ -21,13 +21,15 @@
                 <PackFeature :title="'Personal risk insurance'" :is-include="pack.risk_insurance"/>
                 <PackFeature :title="'Equipments'" :is-include="pack.equipments"/>
                 <PackFeature :title="'Desert Scarf'" :is-include="pack.desert_scarf"/>
-                <PackFeature v-if="vehicle.id === 3" :title="'Drift'" :is-include="pack.drift"/>
+                <PackFeature v-if="pack.vehicle.id === 3" :title="'Drift'" :is-include="pack.drift"/>
             </div>
         </div>
         <div class="h-[50px] flex justify-center items-center ">
-            <MyButton>
-                Reserve
-            </MyButton>
+            <Link :href="route('reservation',pack)" class="w-full">
+                <MyButton>
+                    Reserve
+                </MyButton>
+            </Link>
         </div>
     </div>
 </template>
@@ -35,10 +37,10 @@
 <script setup>
 import MyButton from "@/Components/MyButton.vue";
 import PackFeature from "@/Components/PackFeature.vue";
+import {Link} from "@inertiajs/vue3";
 
 const props = defineProps({
     pack:Object,
-    vehicle:Object,
 })
 
 

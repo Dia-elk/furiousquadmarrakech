@@ -12,10 +12,9 @@ class BuggyController extends Controller
 {
     public function index()
     {
-        $packs = Pack::where('vehicle_id', VehicleEnum::BUGGY)->get();
+        $packs = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::BUGGY)->get();
         return Inertia::render('Buggy/Index', [
             'packs' => $packs,
-            'vehicle' => Vehicle::where('id',VehicleEnum::BUGGY)->first(),
         ]);
     }
 }

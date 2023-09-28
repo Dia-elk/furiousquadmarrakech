@@ -8,7 +8,7 @@
                    :image="'images/heroQuadBg.jpg'"
                    :mobile-image="'images/heroQuadBgMobile.jpg'"
     >
-        <PackagesSection :packs="packs" :vehicle="vehicle" :title="'Quad Packs'"/>
+        <PackagesSection :packs="packs" :title="'Quad Packs'"/>
     </VehicleLayout>
 
 </template>
@@ -20,6 +20,6 @@ import VehicleLayout from "@/Layouts/VehicleLayout.vue";
 
 defineProps({
     packs: Array,
-    vehicle:Object,
+
 })
 </script>

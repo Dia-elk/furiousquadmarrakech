@@ -1,15 +1,15 @@
 <template>
+    <Head>
+        <title>Furious Packs</title>
+    </Head>
     <MainLayout>
-       <FuriousHeroSection :title="'Furious'"/>
-        <video autoplay muted loop id="myVideo" class="">
-            <source src="Lemhllwess.mp4" type="video/mp4">
-        </video>
+       <FuriousHeroSection :title="'Furious Pack'" :description="'Welcome to Furious Packs Customization, where your adventure takes center stage. With our customizable Furious Packs, you\'re in control of crafting the perfect expedition. Select from a variety of thrilling activities, set the duration that suits your schedule, and personalize your experience with optional amenities. At Furious Quad Marrakech.'"/>
+
     </MainLayout>
 </template>
 
 <script setup>
-
-import HeroSection from "@/Components/sections/HeroSection.vue";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FuriousHeroSection from "@/Components/sections/FuriousHeroSection.vue";
+import {Head} from "@inertiajs/vue3";
 </script>

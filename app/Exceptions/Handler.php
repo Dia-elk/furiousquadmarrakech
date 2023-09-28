@@ -15,7 +15,7 @@ class Handler extends ExceptionHandler
      * @param  \Throwable  $e
      * @return \Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function render($request, Throwable $e) : Response
+    public function render($request, Throwable $e)
     {
         $response = parent::render($request, $e);
 

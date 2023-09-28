@@ -13,10 +13,9 @@ class MotocrossController extends Controller
 
     public function index()
     {
-        $packs = Pack::where('vehicle_id', VehicleEnum::MOTOCROSS)->get();
+        $packs = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::MOTOCROSS)->get();
         return Inertia::render('Motocross/Index', [
             'packs' => $packs,
-            'vehicle' => Vehicle::where('id',VehicleEnum::MOTOCROSS)->get(),
         ]);
     }
 }

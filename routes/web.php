@@ -42,4 +42,15 @@ Route::get('/furious',[FuriousController::class,'index'])->name('furious');
 // CONTACT
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 // RESERVATION
-Route::get('Reservation',[ReservationController::class,'index'])->name('reservation');
+Route::get('/reservation/pack/{pack:slug}',[ReservationController::class,'index'])->name('reservation');
+Route::post('/reservation/pack/{pack:slug}',[ReservationController::class,'store'])->name('reservation.store');
+Route::get('/reservation/{reservation}',[ReservationController::class,'show'])->name('reservation.show');
+
+
+Route::prefix('admin')->middleware('auth')->group(function (){
+    Route::get('dashboard',function (){
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+});
+
+require __DIR__ . '/auth.php';

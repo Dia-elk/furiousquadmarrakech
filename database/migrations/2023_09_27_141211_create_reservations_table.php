@@ -14,9 +14,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->foreignIdFor(Pack::class,'pack_id')->constrained('packs');
             $table->foreignIdFor(Customer::class,'customer_id')->constrained('customers');
+            $table->boolean('is_confirmed')->default(false);
+            $table->double('total_price');
             $table->timestamps();
         });
     }

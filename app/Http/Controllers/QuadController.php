@@ -12,10 +12,9 @@ class QuadController extends Controller
 {
     public function index()
     {
-        $packs = Pack::where('vehicle_id', VehicleEnum::QUAD)->get();
+        $packs = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::QUAD)->get();
         return Inertia::render('Quad/Index', [
             'packs' => $packs,
-            'vehicle' => Vehicle::where('id',VehicleEnum::QUAD)->first(),
         ]);
     }
 }
