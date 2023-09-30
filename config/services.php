@@ -21,6 +21,10 @@ return [
         'scheme' => 'https',
     ],
 
+    'slack' => [
+        'reservation' => env('SLACK_RESERVATION_CHANNEL'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

@@ -18,6 +18,13 @@ return new class extends Migration
             $table->foreignIdFor(Pack::class,'pack_id')->constrained('packs');
             $table->foreignIdFor(Customer::class,'customer_id')->constrained('customers');
             $table->boolean('is_confirmed')->default(false);
+            $table->string('name')->nullable();
+            $table->string('country')->nullable();
+            $table->date('reservation_date');
+            $table->string('reservation_time');
+            $table->integer('drivers');
+            $table->integer('passengers');
+            $table->integer('children');
             $table->double('total_price');
             $table->timestamps();
         });

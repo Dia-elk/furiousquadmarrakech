@@ -6,7 +6,10 @@ use App\Models\Customer;
 use App\Models\Pack;
 use App\Models\Reservation;
 
+use App\Notifications\ReservationNotification;
+use App\Notifications\SubscriberNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
 
 class ReservationController extends Controller
@@ -18,11 +21,14 @@ class ReservationController extends Controller
         ]);
     }
 
-    public function store(Request $request, Pack $pack)
+    public function create(Pack $pack)
     {
-
-
-
+        return Inertia::render('Reservation/Create', [
+            'pack' => $pack,
+        ]);
+    }
+    public function store(Request $request, Pack $pack )
+    {
         if (count(Customer::where('email', $request->email)->get()) || count(Customer::where('phone_number', $request->phone)->get())) {
             $customer = Customer::where('email', $request->email)->first() ?? Customer::where('phone_number', $request->phone)->first();
 
@@ -40,8 +46,18 @@ class ReservationController extends Controller
             Reservation::create([
                 'pack_id' => $pack->id,
                 'customer_id' => $customer->id,
-                'total_price' => $pack->price,
+                'name' => $request->name,
+                'country' => $request->country,
+                'reservation_date' => $request->date,
+                'reservation_time' => $request->time,
+                'drivers' => $request->driver,
+                'passengers' => $request->passenger,
+                'children' => $request->child,
+                'total_price' => $request->price,
             ]);
+
+
+        Notification::route('slack' ,config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
 
 
         return to_route('reservation.show', $reservation);

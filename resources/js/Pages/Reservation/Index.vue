@@ -16,7 +16,6 @@
                        <Spinner v-if="form.processing"/>
                    </MyButton>
                </button>
-
             </form>
         </div>
     </MainLayout>

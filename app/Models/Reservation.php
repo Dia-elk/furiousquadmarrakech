@@ -16,6 +16,13 @@ class Reservation extends Model
         'pack_id',
         'customer_id',
         'is_confirmed',
+        'name',
+        'country',
+        'reservation_date',
+        'reservation_time',
+        'drivers',
+        'passengers',
+        'children',
         'total_price'
     ];
 

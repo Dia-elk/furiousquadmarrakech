@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\Vehicle::class,'vehicle_id')->constrained('vehicles');
             $table->string('slug')->unique();
+            $table->double('passenger_price');
+            $table->double('child_price');
             $table->string('duration');
             $table->double('price');
             $table->string('name');
