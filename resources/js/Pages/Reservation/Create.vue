@@ -4,16 +4,18 @@
     </Head>
     <MainLayout>
         <div class="flex w-full flex-col justify-center items-center text-white space-y-6 mb-24">
-            <div class="h-[400px] w-full flex justify-center items-center pb-6 relative">
+            <div class="h-[250px] w-full flex justify-center items-end pb-6 relative">
                 <div class="w-full h-full absolute top-0">
-                    <div class="w-full h-full absolute top-0 bg-gradient-to-b from-[#050403]/0 via-[#050403]/10 to-[#050403]">
+                    <div
+                        class="w-full h-full absolute top-0 bg-gradient-to-b from-[#050403]/0 via-[#050403]/10 to-[#050403]">
                     </div>
                     <img v-if="pack.vehicle_id === 1" src="/images/heroBuggyBg.jpg" class="object-cover w-full h-full">
                     <img v-if="pack.vehicle_id === 2" src="/images/heroQuadBg.jpg" class="object-cover w-full h-full">
-                    <img v-if="pack.vehicle_id === 3" src="/images/heroMotocrossBg.jpg" class="object-cover w-full h-full">
+                    <img v-if="pack.vehicle_id === 3" src="/images/heroMotocrossBg.jpg"
+                         class="object-cover w-full h-full">
                 </div>
                 <h1 class="text-white text-4xl font-bold z-10">
-                    {{pack.name}}
+                    {{ pack.name }}
                 </h1>
             </div>
             <h3>
@@ -21,7 +23,8 @@
             </h3>
             <!-- form -->
             <div class="w-full px-6  md:px-24 lg:px-48">
-                <form class="flex gap-4 flex-col" @submit.prevent="form.price=totalPrice; form.post(route('reservation.store',pack))">
+                <form class="flex gap-4 flex-col"
+                      @submit.prevent="form.price=totalPrice; form.post(route('reservation.store', pack))">
                     <!-- form for driver and passenger and child -->
                     <div v-if="!showDetailsForm" class="flex gap-4 flex-col">
 
@@ -59,7 +62,8 @@
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs">€ {{ pack.passenger_price }}</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
                             </div>
-                            <div v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
+                            <div v-if="pack.vehicle_id !== 3"
+                                 class="w-36 bg-neutral-800 flex justify-between items-center">
                                 <div @click="minusPassenger"
                                      class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">
                                     -
@@ -86,7 +90,8 @@
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs">€ {{ pack.child_price }}</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
                             </div>
-                            <div  v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
+                            <div v-if="pack.vehicle_id !== 3"
+                                 class="w-36 bg-neutral-800 flex justify-between items-center">
                                 <div @click="minusChild"
                                      class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">
                                     -
@@ -128,7 +133,7 @@
                         <div class="flex gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Full Name</h3>
-                                <input v-model="form.name" type="text"
+                                <input v-model="form.name" type="text" required
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
@@ -140,19 +145,19 @@
                         <div class="flex gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Email</h3>
-                                <input v-model="form.email" type="email"
+                                <input v-model="form.email" type="email" required
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
                                 <h3 class="font-semibold">Phone Number</h3>
-                                <input v-model="form.phone" type="tel"
+                                <input v-model="form.phone" type="number" required
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
                         <div class="flex gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Date</h3>
-                                <input v-model="form.date" type="date" :min="today"
+                                <input v-model="form.date" type="date" :min="today" required
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
@@ -182,13 +187,18 @@
                     </div>
 
                     <div v-if="showDetailsForm" class="flex justify-between w-full">
-                        <div class="w-48  cursor-pointer  flex justify-center items-center gap-4" @click="showDetailsForm=false" @mouseenter="isPreviousHover=true" @mouseleave="isPreviousHover=false">
-                               <div class="transition-all duration-500 " :class="isPreviousHover?'mr-4':''">
-                                   <svg width="55" height="8" viewBox="0 0 55 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M0.646443 3.64644C0.451181 3.8417 0.451181 4.15829 0.646443 4.35355L3.82842 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.73079 7.34027 4.73079 7.02368 4.53553 6.82842L1.7071 4L4.53553 1.17157C4.73079 0.976306 4.73079 0.659724 4.53553 0.464462C4.34027 0.2692 4.02369 0.269199 3.82842 0.464462L0.646443 3.64644ZM55 3.5L0.999996 3.5L0.999996 4.5L55 4.5L55 3.5Z" fill="white"/>
-                                   </svg>
+                        <div class="w-48  cursor-pointer  flex justify-center items-center gap-4"
+                             @click="showDetailsForm=false" @mouseenter="isPreviousHover=true"
+                             @mouseleave="isPreviousHover=false">
+                            <div class="transition-all duration-500 " :class="isPreviousHover?'mr-4':''">
+                                <svg width="55" height="8" viewBox="0 0 55 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.646443 3.64644C0.451181 3.8417 0.451181 4.15829 0.646443 4.35355L3.82842 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.73079 7.34027 4.73079 7.02368 4.53553 6.82842L1.7071 4L4.53553 1.17157C4.73079 0.976306 4.73079 0.659724 4.53553 0.464462C4.34027 0.2692 4.02369 0.269199 3.82842 0.464462L0.646443 3.64644ZM55 3.5L0.999996 3.5L0.999996 4.5L55 4.5L55 3.5Z"
+                                        fill="white"/>
+                                </svg>
 
-                               </div>
+                            </div>
                             <div>
                                 Previous
                             </div>
@@ -239,7 +249,7 @@ const form = useForm({
     child: ref(0),
     date: ref(''),
     time: ref('09:00'),
-    price:ref(),
+    price: ref(),
 })
 
 
@@ -298,9 +308,9 @@ function minusChild() {
 }
 
 
-function book(){
+function book() {
     form.price = totalPrice;
-    form.post(route('reservation.store',pack));
+    form.post(route('reservation.store', pack));
 }
 
 </script>

@@ -17,7 +17,7 @@
             <MyNavLink :is-active="$page.url.startsWith('/motocross')" :href="route('motocross')">
                 Motocross
             </MyNavLink>
-            <MyNavLink :is-active="$page.url.startsWith('/furious')" :href="route('furious')">
+            <MyNavLink v-if="true" :is-active="$page.url.startsWith('/furious')" :href="route('furious')">
                 Furious
             </MyNavLink>
             <MyNavLink :is-active="$page.url.startsWith('/contact')" :href="route('contact')">
@@ -46,7 +46,7 @@
                     <MyNavLink :href="route('buggy')" :is-active="$page.url.startsWith('/buggy')" >Buggy</MyNavLink>
                     <MyNavLink :href="route('quad')" :is-active="$page.url.startsWith('/quad')" >Quad</MyNavLink>
                     <MyNavLink :href="route('motocross')" :is-active="$page.url.startsWith('/motocross')" >Motocross</MyNavLink>
-                    <MyNavLink :href="route('furious')" :is-active="$page.url.startsWith('/furious')" >Furious</MyNavLink>
+                    <MyNavLink v-if="true" :href="route('furious')" :is-active="$page.url.startsWith('/furious')" >Furious</MyNavLink>
                     <MyNavLink :href="route('contact')" :is-active="$page.url.startsWith('/contact')" >Contact</MyNavLink>
                     <BtnNavLink>Book</BtnNavLink>
                 </div>

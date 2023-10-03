@@ -8,8 +8,10 @@ use App\Http\Controllers\FuriousController;
 use App\Http\Controllers\MotocrossController;
 use App\Http\Controllers\QuadController;
 use App\Http\Controllers\ReservationController;
+use App\Mail\ReservationMail;
 use App\Models\Pack;
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -30,6 +32,10 @@ Route::get('/', function () {
             'packs'=>$packs,
             ]);
 })->name('welcome');
+
+Route::get('/email' , function (){
+   return view('mails/reservation');
+});
 
 // BUGGY
 Route::get('/buggy',[BuggyController::class,'index'])->name('buggy');

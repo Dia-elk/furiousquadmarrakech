@@ -9,7 +9,9 @@
                     experiences and select the perfect adventure that electrifies your senses.</p>
                 <div class="flex justify-center gap-4 mt-10">
                     <div class="w-[300px]">
-                        <MyButton>Plan your Ride</MyButton>
+                        <Link class="w-full" :href="route('furious')">
+                            <MyButton>Plan your Ride</MyButton>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -35,6 +37,7 @@
 import MyButton from "@/Components/MyButton.vue";
 import ScrollMouse from "@/Components/ScrollMouse.vue";
 import {ref} from "vue";
+import {Link} from "@inertiajs/vue3";
 
 
 

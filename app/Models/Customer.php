@@ -19,4 +19,5 @@ class Customer extends Model
     {
         return $this->hasMany(Reservation::class);
     }
+
 }

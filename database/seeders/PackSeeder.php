@@ -112,7 +112,7 @@ class PackSeeder extends Seeder
             'pick_up' => true,
             'private_pick_up' => false,
             'lunch' => true,
-            'risk_insurance' => true,
+            'risk_insurance' => false,
             'equipments' => true,
             'desert_scarf' => false,
             'drift' => false,

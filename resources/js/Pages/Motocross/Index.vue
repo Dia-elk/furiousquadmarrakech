@@ -9,6 +9,7 @@
                    :mobile-image="'images/heroMotocrossBgMobile.jpg'"
     >
         <PackagesSection :packs="packs"  :title="'Motocross Packs'"/>
+
     </VehicleLayout>
 
 

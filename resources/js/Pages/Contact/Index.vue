@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <title>Contact</title>
+    </Head>
+
     <MainLayout>
         <div class="flex h-screen text-white justify-center items-center">
             <h1>Contact</h1>
@@ -7,7 +11,7 @@
 </template>
 
 <script setup>
-
-import HeroSection from "@/Components/sections/HeroSection.vue";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import {Head} from "@inertiajs/vue3";
+
 </script>

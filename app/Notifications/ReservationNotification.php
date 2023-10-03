@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
 
-class ReservationNotification extends Notification
+class ReservationNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -42,10 +42,21 @@ class ReservationNotification extends Notification
         return (new SlackMessage)
                     ->content(
                         '
-                        New Reservation
-from: '.$this->reservation->email.', Phone Number:'.$this->reservation->phone_number.'
-for the pack: '.$this->reservation->name.'
-Total price: '.$this->reservation.'
+******************************************
+
+🎉 New Reservation 🎉
+
+Email: '.$this->reservation->customer->email.'.
+Phone: '.$this->reservation->customer->phone_number.'.
+The Pack: '.$this->reservation->pack->name.'.
+Reservation date : '.$this->reservation->reservation_date.'.
+Reservation Time : '.$this->reservation->reservation_time.'.
+Drivers : '.$this->reservation->drivers.'.
+Passenger : '.$this->reservation->passengers.'.
+Children : '.$this->reservation->children.'.
+Total price: €'.$this->reservation->total_price.'.
+
+******************************************
                        '
                     );
     }
