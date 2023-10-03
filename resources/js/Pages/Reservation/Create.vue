@@ -130,7 +130,7 @@
 
                     <!-- form for customer details -->
                     <div v-if="showDetailsForm" class="flex flex-col gap-6 mb-6 w-full h-full">
-                        <div class="flex gap-10 w-full">
+                        <div class="flex md:flex-row flex-col gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Full Name</h3>
                                 <input v-model="form.name" type="text" required
@@ -142,7 +142,8 @@
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
-                        <div class="flex gap-10 w-full">
+
+                        <div class="flex md:flex-row flex-col   gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Email</h3>
                                 <input v-model="form.email" type="email" required
@@ -154,7 +155,8 @@
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
-                        <div class="flex gap-10 w-full">
+
+                        <div class="flex md:flex-row flex-col  gap-10 w-full">
                             <label class="w-full">
                                 <h3 class="font-semibold">Date</h3>
                                 <input v-model="form.date" type="date" :min="today" required
