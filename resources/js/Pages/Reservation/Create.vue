@@ -151,7 +151,7 @@
                             </label>
                             <label class="w-full">
                                 <h3 class="font-semibold">Phone Number</h3>
-                                <input v-model="form.phone" type="number" required
+                                <input v-model="form.phone" type="tel" required
                                        class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
