@@ -56,7 +56,7 @@
         Dear {{$reservation->name}},
         <br><br>
         Thank you for choosing Furious Quad Marrakech! We have received your reservation .<br>
-        To see your reservation <a href="https://preprod-fqm.diaelk.dev/reservation/{{$reservation->id}}">Click Here</a>
+        To see your reservation <a href="https://dev-fqm.diaelk.dev/reservation/{{$reservation->id}}">Click Here</a>
     </div>
     <div class="details-box">
         <strong>Reservation Details:</strong><br>
