@@ -13,20 +13,20 @@ class CustomerService
             $customer = Customer::where('email', $email)->first() ?? Customer::where('phone_number', $phone)->first();
 
             if ($customer->email === $email && $customer->phone_number === $phone) {
-
+                dd('1' . $customer);
                 return $customer;
-            } else {
 
-                return tap($customer)->update([
+            } else {
+                $customer->update([
                     'email' => $email,
                     'phone_number' => $phone,
-                ])->first();
+                ]);
 
+                return Customer::where('id', $customer->id)->first();
             }
 
 
         } else {
-
             return Customer::create([
                 'email' => $email,
                 'phone_number' => $phone,]);
