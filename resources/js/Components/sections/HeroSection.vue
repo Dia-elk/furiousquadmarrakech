@@ -9,7 +9,7 @@
                     experiences and select the perfect adventure that electrifies your senses.</p>
                 <div class="flex justify-center gap-4 mt-10">
                     <div class="w-[300px]">
-                        <Link class="w-full" :href="route('furious')">
+                        <Link class="w-full" href="#">
                             <MyButton>Plan your Ride</MyButton>
                         </Link>
                     </div>

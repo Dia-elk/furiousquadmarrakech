@@ -44,7 +44,7 @@ Route::get('/quad',[QuadController::class,'index'])->name('quad');
 // MOTOCROSS
 Route::get('/motocross',[MotocrossController::class,'index'])->name('motocross');
 // FURIOUS
-Route::get('/furious',[FuriousController::class,'index'])->name('furious');
+//Route::get('/furious',[FuriousController::class,'index'])->name('furious');
 // CONTACT
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 // RESERVATION
