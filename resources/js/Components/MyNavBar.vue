@@ -4,7 +4,7 @@
             <WhiteLogo v-if="!isOpen"/>
             <BlackLogo v-if="isOpen"/>
         </Link>
-        <div class="hidden lg:flex gap-10 items-center ">
+        <div class="hidden lg:flex gap-10 items-center z-50">
             <MyNavLink :is-active="$page.url === '/'" :href="route('welcome')">
                 Home
             </MyNavLink>
@@ -23,7 +23,7 @@
             <MyNavLink :is-active="$page.url.startsWith('/contact')" :href="route('contact')">
                 Contact
             </MyNavLink>
-            <BtnNavLink :href="route('welcome')">
+            <BtnNavLink :href="route('vehicle-choice')">
                 Book
             </BtnNavLink>
         </div>

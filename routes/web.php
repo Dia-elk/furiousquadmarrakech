@@ -39,14 +39,25 @@ Route::get('/email' , function (){
 
 // BUGGY
 Route::get('/buggy',[BuggyController::class,'index'])->name('buggy');
+
 // QUAD
 Route::get('/quad',[QuadController::class,'index'])->name('quad');
+
 // MOTOCROSS
 Route::get('/motocross',[MotocrossController::class,'index'])->name('motocross');
+
 // FURIOUS
 //Route::get('/furious',[FuriousController::class,'index'])->name('furious');
+
 // CONTACT
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
+Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
+
+//Vehicle choice
+Route::get('/vehicle-choice', function (){
+    return Inertia::render('Vehicle-choice/Index');
+})->name('vehicle-choice');
+
 // RESERVATION
 Route::get('/reservation/pack/{pack:slug}',[ReservationController::class,'create'])->name('reservation');
 Route::post('/reservation/pack/{pack:slug}',[ReservationController::class,'store'])->name('reservation.store');

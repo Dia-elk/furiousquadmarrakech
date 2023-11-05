@@ -23,6 +23,7 @@ return [
 
     'slack' => [
         'reservation' => env('SLACK_RESERVATION_CHANNEL'),
+        'contact' => env('SLACK_CONTACT_CHANNEL'),
     ],
 
     'postmark' => [
