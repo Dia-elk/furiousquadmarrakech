@@ -12,7 +12,7 @@
                <img src="images/heroBg.jpg" class="w-full h-full object-cover z-0 hidden md:block" alt="quad and motocross in marrakech">
                <img src="images/heroBgMobile.jpg" class="w-full h-full object-cover z-0 md:hidden block" alt="quad and motocross in marrakech">
            </div>
-           <div class="flex h-full w-full text-white justify-center items-center absolute top-0  z-20">
+           <div class="flex h-full w-full text-white justify-center items-center absolute top-0  z-20  mt-10 px-4">
                <div class="max-w-7xl space-y-6">
                    <div class=" text-center space-y-2">
                        <h1 class="text-2xl  font-bold">Contact Us</h1>
@@ -22,7 +22,7 @@
 
                    <form class="w-full flex flex-col gap-4"
                          @submit.prevent="form.post(route('contact.store'), {onSuccess: successMessage,})">
-                       <div class="flex gap-4">
+                       <div class="flex flex-col md:flex-row gap-4">
                            <label class="w-full">
                                <h3 class="font-semibold">Name</h3>
                                <input v-model="form.name" type="text"
