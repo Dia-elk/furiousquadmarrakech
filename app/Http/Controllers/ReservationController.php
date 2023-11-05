@@ -13,9 +13,11 @@ use App\Notifications\SubscriberNotification;
 use App\Services\Customer\CustomerService;
 use App\Services\Reservation\ReservationService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
+use Mockery\Exception;
 
 class ReservationController extends Controller
 {
@@ -26,19 +28,16 @@ class ReservationController extends Controller
         ]);
     }
 
-    public function store(Request $request, Pack $pack, CustomerService $customerService, ReservationService $reservationService)
+    public function store(Request $request, Pack $pack,  ReservationService $reservationService)
     {
-        // Find Customer or create one
-        $customer = $customerService->findOrCreate($request->email, $request->phone);
 
-        //Create Reservation
-        $reservation = $reservationService->create($request, $pack, $customer);
+          $reservation = $reservationService->create($request, $pack);
 
-        // Sending Notification to the  owner and email to the client
-        Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
-        Notification::route('slack', config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
+          // Sending Notification to the  owner and email to the client
+          Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
+          Notification::route('slack', config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
 
-        return to_route('reservation.show', $reservation);
+          return to_route('reservation.show', $reservation);
     }
 
     public function show(Reservation $reservation)
