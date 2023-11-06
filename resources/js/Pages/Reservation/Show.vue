@@ -6,13 +6,13 @@
         <div class="h-screen flex  justify-center items-center text-white">
             <div class="w-full mt-20 md:mt-0 h-full grid md:grid-cols-3">
                 <div class="w-full md:col-span-2 border-r-[0.6px] border-gray-600 text-white ">
-                    <div class="w-full h-full items-center justify-center flex gap-10 flex-col">
+                    <div class="w-full h-full items-center justify-center flex gap-10 flex-col px-4 md:px-6">
                         <h1 class="font-bold text-2xl">Reservation For {{ pack.name }}</h1>
-                        <div class="space-y-2 w-full px-6">
+                        <div class="space-y-2 w-full ">
                             <h1 class="font-bold text-xl">Reservation Details :</h1>
 
                             <div class="flex justify-between">
-                                <p class="text-md font-medium text-gray-400">Reservation Id : </p>
+                                <p class="text-md font-medium text-gray-400">Id : </p>
                                 <p class="text-sm text-gray-400">{{ reservation.id }}</p>
                             </div>
 
@@ -54,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="w-full md:col-span-1 flex flex-col justify-center">
+                <div class="hidden md:flex w-full md:col-span-1  flex-col justify-center">
                     <PackCardShowReservation :pack="pack"/>
                 </div>
             </div>
