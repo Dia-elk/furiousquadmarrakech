@@ -45,7 +45,7 @@
                        <div class="flex justify-center">
                            <button class="w-48" type="submit">
                                <MyButton>
-                                   <p v-if="!form.processing">Book Now</p>
+                                   <p v-if="!form.processing">Send message</p>
                                    <Spinner v-if="form.processing"/>
                                </MyButton>
                            </button>
