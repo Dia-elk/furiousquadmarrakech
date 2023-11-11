@@ -5,7 +5,7 @@
 
     <MainLayout>
         <HeroSection/>
-
+        <AboutSection/>
     </MainLayout>
 
 </template>
@@ -16,8 +16,10 @@ import {Head} from "@inertiajs/vue3";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import {ref} from "vue";
 import PackagesSection from "@/Components/sections/PackagesSection.vue";
+import AboutSection from "@/Components/sections/AboutSection.vue";
+
 defineProps({
-    packs:Array,
+    packs: Array,
 })
 
 </script>
