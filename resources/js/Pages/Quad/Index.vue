@@ -17,6 +17,9 @@
 import PackagesSection from "@/Components/sections/PackagesSection.vue";
 import {Head} from "@inertiajs/vue3";
 import VehicleLayout from "@/Layouts/VehicleLayout.vue";
+import FAQ from "@/Components/sections/FAQ.vue";
+import ContactSection from "@/Components/sections/ContactSection.vue";
+import PackDescriptions from "@/Components/PackDescriptions.vue";
 
 defineProps({
     packs: Array,

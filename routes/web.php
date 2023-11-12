@@ -27,45 +27,53 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    $packs = Pack::where('vehicle_id' , VehicleEnum::BUGGY)->get();
+
+    $buggyPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::BUGGY)->first();
+    $quadPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::QUAD)->first();
+    $motocrossPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::MOTOCROSS)->first();
+    $packs = [
+        $quadPack,
+        $buggyPack,
+        $motocrossPack,
+    ];
     return Inertia::render('Welcome', [
-            'packs'=>$packs,
-            ]);
+        'packs' => $packs,
+    ]);
 })->name('welcome');
 
-Route::get('/email' , function (){
-   return view('mails/reservation');
+Route::get('/email', function () {
+    return view('mails/reservation');
 });
 
 // BUGGY
-Route::get('/buggy',[BuggyController::class,'index'])->name('buggy');
+Route::get('/buggy', [BuggyController::class, 'index'])->name('buggy');
 
 // QUAD
-Route::get('/quad',[QuadController::class,'index'])->name('quad');
+Route::get('/quad', [QuadController::class, 'index'])->name('quad');
 
 // MOTOCROSS
-Route::get('/motocross',[MotocrossController::class,'index'])->name('motocross');
+Route::get('/motocross', [MotocrossController::class, 'index'])->name('motocross');
 
 // FURIOUS
-//Route::get('/furious',[FuriousController::class,'index'])->name('furious');
+Route::get('/furious', [FuriousController::class, 'index'])->name('furious');
 
 // CONTACT
-Route::get('/contact',[ContactController::class,'index'])->name('contact');
-Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 //Vehicle choice
-Route::get('/vehicle-choice', function (){
+Route::get('/vehicle-choice', function () {
     return Inertia::render('Vehicle-choice/Index');
 })->name('vehicle-choice');
 
 // RESERVATION
-Route::get('/reservation/pack/{pack:slug}',[ReservationController::class,'create'])->name('reservation');
-Route::post('/reservation/pack/{pack:slug}',[ReservationController::class,'store'])->name('reservation.store');
-Route::get('/reservation/{reservation}',[ReservationController::class,'show'])->name('reservation.show');
+Route::get('/reservation/pack/{pack:slug}', [ReservationController::class, 'create'])->name('reservation');
+Route::post('/reservation/pack/{pack:slug}', [ReservationController::class, 'store'])->name('reservation.store');
+Route::get('/reservation/{reservation}', [ReservationController::class, 'show'])->name('reservation.show');
 
 
-Route::prefix('admin')->middleware('auth')->group(function (){
-    Route::get('dashboard',function (){
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });

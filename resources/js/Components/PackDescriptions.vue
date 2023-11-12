@@ -8,7 +8,7 @@
                     <h3 class="font-bold">Duration :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    For your peace of mind, we advise you to check that you have personal all-risk insurance with a repatriation option ( if necessary, this link may be useful if your actual insurances do not cover all activities ) .
+                    The total time is approximately 2 hours and 30 minutes, which includes meet and greet, arrival, preparation and briefing, with a 1 hour and 30-minute quad bike tour.
                 </p>
             </div>
 
@@ -19,7 +19,8 @@
                     <h3 class="font-bold">Pictures with palm trees :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    We advise you to wear closed shoes, comfortable clothes, sunscreen and warm clothing for the sun in winter .</p>
+                    Head to a natural and wide place to take some memorable pictures with your loved ones and enjoy the fascinating view of palms and the Marrakech Palmeraie desert.
+                </p>
             </div>
 
             <div class="mb-8">
@@ -28,7 +29,9 @@
                     </div>
                     <h3 class="font-bold">Tea and snacks :</h3>
                 </div>
-                <p class="mt-2 text-sm text-gray-500">Don't forget to bring your ID ( passport or driver's license ) .</p>
+                <p class="mt-2 text-sm text-gray-500">
+                    Take some moment to enjoy a delicious free Moroccan mint tea with a traditional Moroccan snack in guest house.
+                </p>
             </div>
 
             <div class="mb-8">
@@ -38,7 +41,7 @@
                     <h3 class="font-bold">Pick up and return to your hotel or nearest :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    Not recommended for pregnant travelers. Minimum age to ride a quad bike is 16 ( with a parent on site to sign the release form ) .
+                    Pick Up/ Drop Off from your Hotel/Riad Marrakech, if the accommodation is not accessible by car a meeting point must be provide and send to you via email or WhatsApp.
                 </p>
             </div>
 
@@ -49,7 +52,8 @@
                     <h3 class="font-bold">Private Pick Up :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    Enjoy a day  in the desert as you ride between remote Berber villages, palm tree groves and stark landscapes on this small group ATV trip. Join a guide and your group, on this intimate journey into the rugged deserts just outside of Marrakesh, and enjoy the harsh terrain. Then take a break when you stop at a local family's home for Moroccan tea and a snack .</p>
+                    our private pickup service, tailored for your convenience and a smooth beginning to your quad biking experience.
+                </p>
             </div>
 
             <div class="mb-8">
@@ -59,7 +63,7 @@
                     <h3 class="font-bold">Lunch :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
+                    Lunch featuring traditional Moroccan foods, including tagine, salad, drinks, and fruit, will be served in a traditional Moroccan tent for your enjoyment.
                 </p>
             </div>
 
@@ -70,18 +74,7 @@
                     <h3 class="font-bold">Dinner complete :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
-                </p>
-            </div>
-
-            <div class="mb-8">
-                <div class="flex  items-center gap-4">
-                    <div class="h-[1px]  w-7  bg-[#c10c10] ">
-                    </div>
-                    <h3 class="font-bold">Personal risk insurance :</h3>
-                </div>
-                <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
+                    Lunch featuring traditional Moroccan foods, including tagine, salad, drinks, and fruit, will be served in a traditional Moroccan tent with a beautiful sunset view.
                 </p>
             </div>
 
@@ -93,7 +86,7 @@
                 </div>
 
                 <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
+                    For your safety and comfort, we provide complimentary equipment including helmets, headwear, and goggles—because your well-being is our top priority.
                 </p>
             </div>
 
@@ -101,23 +94,13 @@
                 <div class="flex  items-center gap-4">
                     <div class="h-[1px]  w-7  bg-[#c10c10] ">
                     </div>
-                    <h3 class="font-bold">Desert Scarf :</h3>
+                    <h3 class="font-bold">Furious Scarf :</h3>
                 </div>
                 <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
+                    For an authentic experience, we offer you a free Desert Scarf that represent our cultural identity, adding a touch of local charm to your experience.
                 </p>
             </div>
 
-            <div class="mb-8" v-if="page.url.startsWith('/motocross')">
-                <div class="flex  items-center gap-4">
-                    <div class="h-[1px]  w-7  bg-[#c10c10] ">
-                    </div>
-                    <h3 class="font-bold">Drift :</h3>
-                </div>
-                <p class="mt-2 text-sm text-gray-500">
-                    One of the best tours we suggest in the surrounding areas of Marrakesh. Feel free to experience the palm desert in a 700cc buggy during your stay in Marrakesh .
-                </p>
-            </div>
         </div>
     </div>
 </template>

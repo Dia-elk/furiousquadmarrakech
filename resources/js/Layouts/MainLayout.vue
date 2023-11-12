@@ -23,6 +23,12 @@
             <a target="_blank" href="https://www.tiktok.com/@furious.quad">
                 <Tiktok/>
             </a>
+            <a target="_blank" href="https://www.airbnb.fr/users/show/543464602">
+                <Airbnb/>
+            </a>
+            <a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g293734-d26818101-Reviews-Furious_Quad_Marrakech-Marrakech_Marrakech_Safi.html">
+                <Tripadvisor/>
+            </a>
         </div>
     </footer>
 </template>
@@ -33,6 +39,8 @@ import MyNavBar from "@/Components/MyNavBar.vue";
 import Instagram from "@/Icons/Instagram.vue";
 import Tiktok from "@/Icons/Tiktok.vue";
 import Facebook from "@/Icons/Facebook.vue";
+import Tripadvisor from "@/Icons/Tripadvisor.vue";
+import Airbnb from "@/Icons/Airbnb.vue";
 
 const date = new Date();
 

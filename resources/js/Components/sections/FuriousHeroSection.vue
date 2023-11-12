@@ -10,16 +10,15 @@
         </div>
 
         <div class="w-full h-full absolute top-0 ">
-            <video autoplay  muted  loop id="myVideo" class="w-full h-screen object-cover z-0">
+            <video autoplay  muted  loop id="myVideo" class="w-full hidden md:block h-screen object-cover z-0">
                 <source src="videos/furious.mp4" type="video/mp4">
             </video>
+            <img src="images/heroQuadBg.jpg" class="w-full  md:hidden h-screen object-cover z-0">
         </div>
         <div class="w-full h-full absolute top-0 bg-gradient-to-b from-[#050403]/0 via-[#050403]/60 to-[#050403] ">
 
         </div>
-        <div class="absolute bottom-4 w-full flex justify-center items-center ">
-            <ScrollMouse/>
-        </div>
+
     </div>
 </template>
 

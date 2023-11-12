@@ -18,9 +18,8 @@
                 <PackFeature :title="'Private Pick Up'" :is-include="pack.private_pick_up"/>
                 <PackFeature :title="'Lunch'" :is-include="pack.lunch"/>
                 <PackFeature :title="'Dinner complete'" :is-include="pack.dinner"/>
-                <PackFeature :title="'Personal risk insurance'" :is-include="pack.risk_insurance"/>
                 <PackFeature :title="'Equipments'" :is-include="pack.equipments"/>
-                <PackFeature :title="'Desert Scarf'" :is-include="pack.desert_scarf"/>
+                <PackFeature :title="'Furious Scarf'" :is-include="pack.desert_scarf"/>
                 <PackFeature v-if="pack.vehicle.id === 3" :title="'Drift'" :is-include="pack.drift"/>
             </div>
         </div>
