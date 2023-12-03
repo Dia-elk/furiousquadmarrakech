@@ -5,7 +5,7 @@
     <main class="bg-[#050403]">
         <slot/>
     </main>
-    <footer class="h-[100px] flex flex-col-reverse md:flex-row  justify-center md:justify-between items-center px-2 md:p-10 border-t-[0.6px] border-gray-600 mx-6 lg:mx-auto lg:max-w-7xl">
+    <footer class="h-[100px] flex flex-col-reverse  justify-center  items-center px-2 md:p-10 border-t-[0.6px] border-gray-600 mx-6 lg:mx-auto lg:max-w-7xl">
         <div>
             <span class="text-gray-500 lg:text-[12px] text-[10px]">© {{date.getFullYear()}} Furious Quad Marrakech - Made with <span
                 class="text-[#c10c10]">♥</span> by </span>
