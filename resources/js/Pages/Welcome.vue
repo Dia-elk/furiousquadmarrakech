@@ -1,6 +1,8 @@
 <template>
     <Head>
-        <title>Welcome</title>
+        <title>Adventure Tours in Marrakech | Quad, Buggy, and Motocross Experiences</title>
+        <meta name="description" content="Explore Marrakech with our thrilling adventure tours! Join us for Quad Marrakech adventures, Buggy tours, and Motocross experiences. Unforgettable off-road journeys await – book your adventure now!">
+        <meta name="keywords" content="Quad Marrakech, Buggy Marrakech, Motocross Marrakech, Marrakech adventure tours, Off-road experiences, Excursions in Morocco">
     </Head>
 
     <MainLayout>

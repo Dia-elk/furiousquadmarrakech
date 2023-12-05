@@ -1,6 +1,8 @@
 <template>
     <Head>
-        <title>Buggy</title>
+        <title>Buggy Marrakech Tours | Exciting Off-Road Adventures in Morocco</title>
+        <meta name="description" content="Experience the thrill of off-road adventure with our Buggy Marrakech tours! Explore the scenic beauty of Morocco on our guided buggy tours. Book your adrenaline-packed journey now.">
+        <meta name="keywords" content="Buggy Marrakech, Marrakech off-road tours, Buggy adventures Morocco, Off-roading experiences, Marrakech excursions">
     </Head>
     <VehicleLayout :title="'Buggy'"
                    :description="'Discover the excitement of Buggy Adventures! Drive our rugged buggies through diverse landscapes and embark on thrilling journeys. From desert dunes to scenic trails, it\'s an adventure like no other. Book your Buggy Adventure today!'"
