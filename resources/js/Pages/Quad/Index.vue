@@ -1,7 +1,7 @@
 <template>
     <Head>
         <link rel="canonical" href="https://furiousquadmarrakech.com/quad-marrakech" />
-        <title>Quad Marrakech Adventures | Exciting ATV Tours in Morocco</title>
+        <title>Quad Marrakech | Exciting ATV Tours in Morocco</title>
         <meta name="description" content="Discover the thrill of quad biking in Marrakech! Join our guided ATV tours for an unforgettable adventure in Morocco.">
         <meta name="keywords" content="Quad Marrakech, Marrakech ATV tours, Quad biking Morocco, Adventure tours, Marrakech excursions">
     </Head>
