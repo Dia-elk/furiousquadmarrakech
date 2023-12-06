@@ -2,7 +2,7 @@
     <Head>
         <link rel="canonical" href="https://furiousquadmarrakech.com/motocross-marrakech" />
         <title>Motocross Marrakech | Thrilling Dirt Bike Adventures in Morocco</title>
-        <meta name="description" content="Embark on an adrenaline-fueled journey with Motocross Marrakech! Explore the rugged terrains of Morocco on our exhilarating dirt bike adventures. Book your motocross experience now.">
+        <meta name="description" content="Embark on an adrenaline-fueled journey with Motocross Marrakech! Explore the rugged terrains of Morocco on our exhilarating dirt bike adventures.">
         <meta name="keywords" content="Motocross Marrakech, Marrakech dirt bike tours, Off-road motocross adventures, Extreme biking experiences, Marrakech excursions">
     </Head>
 

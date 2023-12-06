@@ -2,7 +2,7 @@
     <Head>
         <link rel="canonical" href="https://furiousquadmarrakech.com/buggy-marrakech" />
         <title>Buggy Marrakech Tours | Exciting Off-Road Adventures in Morocco</title>
-        <meta name="description" content="Experience the thrill of off-road adventure with our Buggy Marrakech tours! Explore the scenic beauty of Morocco on our guided buggy tours. Book your adrenaline-packed journey now.">
+        <meta name="description" content="Experience the thrill of off-road adventure with our Buggy Marrakech tours! Explore the scenic beauty of Morocco on our guided buggy tours.">
         <meta name="keywords" content="Buggy Marrakech, Marrakech off-road tours, Buggy adventures Morocco, Off-roading experiences, Marrakech excursions">
     </Head>
     <VehicleLayout :title="'Buggy Marrakech'"
