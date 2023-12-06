@@ -46,13 +46,13 @@ Route::get('/email', function () {
 });
 
 // BUGGY
-Route::get('/buggy', [BuggyController::class, 'index'])->name('buggy');
+Route::get('/buggy-marrakech', [BuggyController::class, 'index'])->name('buggy');
 
 // QUAD
-Route::get('/quad', [QuadController::class, 'index'])->name('quad');
+Route::get('/quad-marrakech', [QuadController::class, 'index'])->name('quad');
 
 // MOTOCROSS
-Route::get('/motocross', [MotocrossController::class, 'index'])->name('motocross');
+Route::get('/motocross-marrakech', [MotocrossController::class, 'index'])->name('motocross');
 
 // FURIOUS
 Route::get('/furious', [FuriousController::class, 'index'])->name('furious');

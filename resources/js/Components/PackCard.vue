@@ -2,7 +2,7 @@
     <div class="flex flex-col gap-4">
         <div class="h-full border border-gray-600">
            <div class="mt-10">
-               <h1 class="text-gray-100  font-bold text-center md:text-lg">{{pack.name}}</h1>
+               <h3 class="text-gray-100  font-bold text-center md:text-lg">{{pack.name}}</h3>
                <div class="flex text-xl text-gray-300 font-bold justify-center mt-1">
                    <p class=" text-xs mr-1">€</p>
                    <p >{{price}}</p>

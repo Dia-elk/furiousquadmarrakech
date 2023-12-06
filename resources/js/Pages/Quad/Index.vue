@@ -5,12 +5,12 @@
         <meta name="keywords" content="Quad Marrakech, Marrakech ATV tours, Quad biking Morocco, Adventure tours, Marrakech excursions">
     </Head>
 
-    <VehicleLayout :title="'Quad'"
+    <VehicleLayout :title="'Quad Marrakech'"
                    :description="'Discover the thrill of Quad Adventures! Navigate all-terrain vehicles through various landscapes and embark on exciting journeys. Book your Quad Adventure today!'"
                    :image="'images/heroQuadBg.jpg'"
                    :mobile-image="'images/heroQuadBgMobile.jpg'"
     >
-        <PackagesSection :packs="packs" :title="'Quad Packs'"/>
+        <PackagesSection :packs="packs" :title="'Quad Marrakech'"/>
     </VehicleLayout>
 
 </template>

@@ -5,12 +5,12 @@
         <meta name="keywords" content="Motocross Marrakech, Marrakech dirt bike tours, Off-road motocross adventures, Extreme biking experiences, Marrakech excursions">
     </Head>
 
-    <VehicleLayout :title="'Motocross'"
+    <VehicleLayout :title="'Motocross Marrakech'"
                    :description="'Experience the adrenaline rush of Motocross Adventures! Ride high-speed motorcycles through diverse terrains and conquer challenging trails. Book your Motocross Adventure today!'"
                    :image="'images/heroMotocrossBg.jpg'"
                    :mobile-image="'images/heroMotocrossBgMobile.jpg'"
     >
-        <PackagesSection :packs="packs"  :title="'Motocross Packs'"/>
+        <PackagesSection :packs="packs"  :title="'Motocross Marrakech'"/>
 
     </VehicleLayout>
 

@@ -10,8 +10,8 @@
         </div>
 
         <div class="w-full h-full absolute top-0 ">
-            <img :src="image" class="w-full h-full object-cover z-0 hidden md:block" alt="quad and motocross in marrakech">
-            <img :src="mobileImage" class="w-full h-full object-cover z-0 md:hidden block" alt="quad and motocross in marrakech">
+            <img :src="image" class="w-full h-full object-cover z-0 hidden md:block" :alt="title">
+            <img :src="mobileImage" class="w-full h-full object-cover z-0 md:hidden block" :alt="title">
         </div>
         <div class="w-full h-full absolute top-0 bg-gradient-to-b from-[#050403]/0 via-[#050403]/10 to-[#050403]">
 

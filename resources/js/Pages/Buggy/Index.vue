@@ -4,12 +4,12 @@
         <meta name="description" content="Experience the thrill of off-road adventure with our Buggy Marrakech tours! Explore the scenic beauty of Morocco on our guided buggy tours. Book your adrenaline-packed journey now.">
         <meta name="keywords" content="Buggy Marrakech, Marrakech off-road tours, Buggy adventures Morocco, Off-roading experiences, Marrakech excursions">
     </Head>
-    <VehicleLayout :title="'Buggy'"
+    <VehicleLayout :title="'Buggy Marrakech'"
                    :description="'Discover the excitement of Buggy Adventures! Drive our rugged buggies through diverse landscapes and embark on thrilling journeys. From desert dunes to scenic trails, it\'s an adventure like no other. Book your Buggy Adventure today!'"
                    :image="'images/heroBuggyBg.jpg'"
                    :mobile-image="'images/heroBuggyBgMobile.jpg'"
     >
-        <PackagesSection :packs="packs"  :title="'Buggy Packs'"/>
+        <PackagesSection :packs="packs"  :title="'Buggy Marrakech'"/>
     </VehicleLayout>
 </template>
 
