@@ -10,7 +10,7 @@
             <div class="flex h-full w-full text-white justify-center items-center absolute top-0  z-20  mt-10 px-4">
                 <div class="max-w-7xl space-y-6">
                     <div class=" text-center space-y-2">
-                        <h1 class="text-2xl  font-bold">Contact Us</h1>
+                        <h4 class="text-2xl  font-bold">Contact Us</h4>
                         <p class="text-sm max-w-2xl text-gray-300">Got a technical issue? Want to send feedback about a
                             Furious Quad Marrakech? Need details about Reservation? Let us know.</p>
                     </div>
@@ -19,20 +19,20 @@
                           @submit.prevent="form.post(route('contact.store'), {onSuccess: successMessage,})">
                         <div class="flex flex-col md:flex-row gap-4">
                             <label class="w-full">
-                                <h3 class="font-semibold">Name</h3>
+                                <h6 class="font-semibold">Name</h6>
                                 <input v-model="form.name" type="text"
                                        class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600 ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                                 <div class="text-sm text-[#c10c10]" v-if="form.errors.name">{{ form.errors.name }}</div>
                             </label>
                             <label class="w-full">
-                                <h3 class="font-semibold">Email</h3>
+                                <h6 class="font-semibold">Email</h6>
                                 <input v-model="form.email" type="email" required
                                        class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600  ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                                 <div class="text-sm text-[#c10c10]" v-if="form.errors.email">{{ form.errors.email }}</div>
                             </label>
                         </div>
                         <label class="w-full">
-                            <h3 class="font-semibold">Message</h3>
+                            <h6 class="font-semibold">Message</h6>
                             <textarea v-model="form.message" type="text" required rows="6"
                                       class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600  ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full"></textarea>
                             <div class="text-sm text-[#c10c10]" v-if="form.errors.message">{{ form.errors.message }}</div>

@@ -1,7 +1,7 @@
 <template>
     <div class=" transition-all duration-300 w-full  p-6 "
          :class="isOpen?' bg-white':'bg-[#484746]'">
-        <h3 class="transition-all duration-300 flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left"
+        <h6 class="transition-all duration-300 flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left"
             :class="isOpen?'pb-4  text-[#c10c10]':'text-white'">
             {{ question }}
             <svg v-if="!isOpen"
@@ -16,7 +16,7 @@
                 <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
-        </h3>
+        </h6>
         <div v-if="isOpen" class="transition-all duration-300  w-full">
             <p class="text-gray-800 ">
                 {{ answer }}

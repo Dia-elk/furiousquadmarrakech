@@ -6,7 +6,7 @@
             </div>
             <div>
                 <h3 class="text-sm text-gray-400">FAQs</h3>
-                <h1 class="font-bold text-white text-4xl">Frequently asked questions</h1>
+                <h4 class="font-bold text-white text-4xl">Frequently asked questions</h4>
             </div>
         </div>
         <!-- /Title -->
