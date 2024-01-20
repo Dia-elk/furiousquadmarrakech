@@ -7,9 +7,9 @@
 
     <MainLayout>
         <HeroSection/>
+        <StartedPacks :packs="packs"/>
         <AboutSection/>
         <WhyUsSection/>
-        <StartedPacks :packs="packs"/>
         <FAQ/>
         <ContactSection/>
     </MainLayout>
