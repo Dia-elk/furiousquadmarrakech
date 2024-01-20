@@ -7,7 +7,7 @@
             <div class="w-full mt-20 md:mt-0 h-full grid md:grid-cols-3">
                 <div class="w-full md:col-span-2 border-r-[0.6px] border-gray-600 text-white ">
                     <div class="w-full h-full items-center justify-center flex gap-10 flex-col px-4 md:px-6">
-                        <h1 class="font-bold text-2xl">Reservation For {{ pack.name }}</h1>
+                        <h1 class="font-bold text-2xl">Your reservation has been successfully submitted</h1>
                         <div class="space-y-2 w-full ">
                             <h1 class="font-bold text-xl">Reservation Details :</h1>
 
