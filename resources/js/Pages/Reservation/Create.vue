@@ -24,7 +24,9 @@
             <!-- form -->
             <div class="w-full px-6  md:px-24 lg:px-48">
                 <form class="flex gap-4 flex-col"
-                      @submit.prevent="form.price=totalPrice; form.post(route('reservation.store', pack))">
+                      @submit.prevent="form.price=totalPrice; form.post(route('reservation.store', pack),{
+                          onSuccess: trackPurchase(totalPrice),
+                      })">
                     <!-- form for driver and passenger and child -->
                     <div v-if="!showDetailsForm" class="flex gap-4 flex-col">
 
@@ -315,6 +317,10 @@ function book() {
     form.post(route('reservation.store', pack));
 }
 
+function trackPurchase(amount) {
+    fbq('track', 'Purchase', {currency: "EUR", value: amount});
+    return amount
+}
 </script>
 
 <style>
@@ -352,6 +358,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: 1
 }
+
 
 </style>
 
