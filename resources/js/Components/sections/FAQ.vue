@@ -20,13 +20,13 @@
             <div class="cursor-pointer">
                 <FaqCard @click="question2 = !question2" :is-open="question2"
                          question="2. I haven’t received any confirmation after my online booking. What should I do?"
-                         answer="If you haven't received your confirmation, please reach out to us via E-mail at furiousmarrakech@gmail.com or WhatsApp at +212 6 74 89 85 21, and we'll promptly assist you with more details."/>
+                         answer="If you haven't received your confirmation, please reach out to us via E-mail at furiousmarrakech@gmail.com or WhatsApp at +212 6 06 04 02 70, and we'll promptly assist you with more details."/>
             </div>
 
             <div class="cursor-pointer">
                 <FaqCard @click="question3 = !question3" :is-open="question3"
                          question="3. My hotel is out of Marrakech and I am asked to pay supplement for the transfer. Why?"
-                         answer="Our transfers services cover the Medina and Center of Marrakech without extra charges, within the limit of 5 kilometers out of the city. Some hotels are out of the city and this add a lot of kilometers for the drivers. The supplements are only to cover the time, the gas and the use of the vehicle. Supplement is usually 5€ / person, or more if hotel is far out. If you don’t feel like paying a supplement, ask your hotel if there is a shuttle going to the Center. After, we can make an appointment there. To confirm if your hotel is in the free-of- charge zone, please send un an E-mail at furiousmarrakech@gmail.com or contact us via WhatsApp at +212 6 74 89 85 21"/>
+                         answer="Our transfers services cover the Medina and Center of Marrakech without extra charges, within the limit of 5 kilometers out of the city. Some hotels are out of the city and this add a lot of kilometers for the drivers. The supplements are only to cover the time, the gas and the use of the vehicle. Supplement is usually 5€ / person, or more if hotel is far out. If you don’t feel like paying a supplement, ask your hotel if there is a shuttle going to the Center. After, we can make an appointment there. To confirm if your hotel is in the free-of- charge zone, please send un an E-mail at furiousmarrakech@gmail.com or contact us via WhatsApp at +212 6 06 04 02 70"/>
             </div>
 
             <div class="cursor-pointer">
