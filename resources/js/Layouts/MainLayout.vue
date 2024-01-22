@@ -34,7 +34,7 @@
         </div>
     </footer>
     <div class="fixed bottom-0 right-0 p-4 z-50">
-       <a href=" https://wa.me/c/212606040270" target="_blank">
+       <a href="https://wa.me/message/RPG5SLURNGAEE1" target="_blank">
            <div class="h-[50px] w-[50px] flex justify-center items-center bg-green-500 rounded-full ">
                <WhatsApp/>
            </div>
