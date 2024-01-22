@@ -69,7 +69,7 @@
         Reservation ID: {{$reservation->id}}
     </div>
     <div class="message">
-        We look forward to welcoming you on {{$reservation->reservation_date}}. If you have any questions or need to make changes to your reservation, please contact us at <a href="mailto:furiousmarrakech@gmail.com">furiousquadmarrakech@gmail.com</a> or call us at +212 6 74 89 85 21.
+        We look forward to welcoming you on {{$reservation->reservation_date}}. If you have any questions or need to make changes to your reservation, please contact us at <a href="mailto:furiousmarrakech@gmail.com">furiousquadmarrakech@gmail.com</a> or call us at +212 6 06 04 02 70.
         <br><br>
         Thank you once again for choosing Furious Quad Marrakech. We can't wait to serve you!
     </div>
