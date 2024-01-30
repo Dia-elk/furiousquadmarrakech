@@ -6,9 +6,9 @@
                 <div class="flex justify-center items-center gap-2">
                     <p class="text-sm text-gray-300">From</p>
                     <div class="flex text-xl text-gray-300 font-bold justify-center mt-1">
-                        <p class=" text-xs mr-1">€</p>
                         <p >{{price}}</p>
                         <p class=" text-xs">.{{decimalValue}}</p>
+                        <p class="ml-2">Dh</p>
                     </div>
                 </div>
             </div>
