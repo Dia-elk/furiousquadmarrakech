@@ -54,7 +54,7 @@ Reservation Time : '.$this->reservation->reservation_time.'.
 Drivers : '.$this->reservation->drivers.'.
 Passenger : '.$this->reservation->passengers.'.
 Children : '.$this->reservation->children.'.
-Total price: €'.$this->reservation->total_price.'.
+Total price: '.$this->reservation->total_price.' Dh'.'
 
 ******************************************
                        '
