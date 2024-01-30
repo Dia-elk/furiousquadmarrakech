@@ -65,7 +65,7 @@
         Drivers: {{$reservation->drivers}}<br>
         Passengers: {{$reservation->passengers}}<br>
         Children: {{$reservation->children}}<br>
-        Total Price: € {{$reservation->total_price}}<br>
+        Total Price: {{$reservation->total_price}} Dh<br>
         Reservation ID: {{$reservation->id}}
     </div>
     <div class="message">
