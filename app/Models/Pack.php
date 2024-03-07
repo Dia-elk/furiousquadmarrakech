@@ -19,6 +19,7 @@ class Pack extends Model
         'child_price',
         'duration',
         'price',
+        'old_price',
         'name',
         'dinner',
         'pictures',

@@ -3,10 +3,19 @@
         <div class="h-full border border-gray-600">
            <div class="mt-10">
                <h3 class="text-gray-100  font-bold text-center md:text-lg">{{pack.name}}</h3>
-               <div class="flex text-xl text-gray-300 font-bold justify-center mt-1">
-                   <p >{{price}}</p>
-                   <p class=" text-xs">.{{decimalValue}}</p>
-                   <p class="ml-2">Dh</p>
+               <div class="flex flex-col text-xl text-gray-300 font-bold justify-center items-center mt-4">
+                 <div class="flex justify-center">
+                     <p>{{price}}</p>
+                     <p class=" text-xs">.{{decimalValue}}</p>
+                     <p class="ml-2">Dh</p>
+                 </div>
+
+                   <div v-if="pack.old_price" class="flex justify-center items-start  relative text-gray-500 w-fit">
+                       <div class="w-full h-[2px] bg-[#c10c10] absolute top-[10px] -rotate-12"></div>
+                       <p class="text-sm">{{pack.old_price}}</p>
+                       <p class="ml-2 text-sm">Dh</p>
+                   </div>
+
                </div>
            </div>
 

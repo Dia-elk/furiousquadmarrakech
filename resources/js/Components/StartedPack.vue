@@ -3,14 +3,6 @@
         <div class="h-full border border-gray-600">
             <div class="mt-10">
                 <h1 class="text-gray-100  font-bold text-center md:text-lg">{{pack.vehicle.id === 3 ? 'Motocross Ride' :pack.vehicle.id === 2 ?'Quad Ride':pack.vehicle.id === 1?'Buggy Ride':''}}</h1>
-                <div class="flex justify-center items-center gap-2">
-                    <p class="text-sm text-gray-300">From</p>
-                    <div class="flex text-xl text-gray-300 font-bold justify-center mt-1">
-                        <p >{{price}}</p>
-                        <p class=" text-xs">.{{decimalValue}}</p>
-                        <p class="ml-2">Dh</p>
-                    </div>
-                </div>
             </div>
 
             <div class="mx-6 my-10 space-y-2">
