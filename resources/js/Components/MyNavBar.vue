@@ -8,14 +8,17 @@
             <MyNavLink :is-active="$page.url === '/'" :href="route('welcome')">
                 Home
             </MyNavLink>
-            <MyNavLink :is-active="$page.url.startsWith('/buggy')" :href="route('buggy')">
+            <MyNavLink :is-active="$page.url.startsWith('/buggy-marrakech')" :href="route('buggy')">
                 Buggy
             </MyNavLink>
-            <MyNavLink :is-active="$page.url.startsWith('/quad')" :href="route('quad')">
+            <MyNavLink :is-active="$page.url.startsWith('/quad-marrakech')" :href="route('quad')">
                 Quad
             </MyNavLink>
-            <MyNavLink :is-active="$page.url.startsWith('/motocross')" :href="route('motocross')">
+            <MyNavLink :is-active="$page.url.startsWith('/motocross-marrakech')" :href="route('motocross')">
                 Motocross
+            </MyNavLink>
+            <MyNavLink :is-active="$page.url.startsWith('/paragliding-marrakech')" :href="route('paragliding')">
+                Paragliding
             </MyNavLink>
             <MyNavLink v-if="true" :is-active="$page.url.startsWith('/furious')" :href="route('furious')">
                 Furious
@@ -45,10 +48,10 @@
                 </div>
                 <div class="flex flex-col space-y-10 items-center">
                     <MyNavLink :href="route('welcome')" :is-active="$page.url === '/'">Home</MyNavLink>
-                    <MyNavLink :href="route('buggy')" :is-active="$page.url.startsWith('/buggy')">Buggy</MyNavLink>
-                    <MyNavLink :href="route('quad')" :is-active="$page.url.startsWith('/quad')">Quad</MyNavLink>
-                    <MyNavLink :href="route('motocross')" :is-active="$page.url.startsWith('/motocross')">Motocross
-                    </MyNavLink>
+                    <MyNavLink :href="route('buggy')" :is-active="$page.url.startsWith('/buggy-marrakech')">Buggy</MyNavLink>
+                    <MyNavLink :href="route('quad')" :is-active="$page.url.startsWith('/quad-marrakech')">Quad</MyNavLink>
+                    <MyNavLink :href="route('motocross')" :is-active="$page.url.startsWith('/motocross-marrakech')">Motocross</MyNavLink>
+                    <MyNavLink :href="route('paragliding')" :is-active="$page.url.startsWith('/paragliding-marrakech')">Paragliding</MyNavLink>
                     <MyNavLink v-if="true" :href="route('furious')" :is-active="$page.url.startsWith('/furious')">
                         Furious
                     </MyNavLink>

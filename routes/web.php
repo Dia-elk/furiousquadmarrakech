@@ -6,6 +6,7 @@ use App\Http\Controllers\BuggyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FuriousController;
 use App\Http\Controllers\MotocrossController;
+use App\Http\Controllers\ParaglidingController;
 use App\Http\Controllers\QuadController;
 use App\Http\Controllers\ReservationController;
 use App\Mail\ReservationMail;
@@ -53,6 +54,9 @@ Route::get('/quad-marrakech', [QuadController::class, 'index'])->name('quad');
 
 // MOTOCROSS
 Route::get('/motocross-marrakech', [MotocrossController::class, 'index'])->name('motocross');
+
+// PARAPENTE
+Route::get('/paragliding-marrakech', [ParaglidingController::class, 'index'])->name('paragliding');
 
 // FURIOUS
 Route::get('/furious', [FuriousController::class, 'index'])->name('furious');
