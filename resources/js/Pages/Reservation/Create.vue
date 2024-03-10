@@ -34,7 +34,7 @@
                         <Divider/>
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Driver ( 17 - 75 )</h3>
+                                <h3 class="font-semibold">Driver ( 14  - 75 years old) </h3>
                                 <p class="text-xs"> {{ pack.price }} Dh</p>
                             </div>
                             <div class="w-36 bg-neutral-800 flex justify-between items-center">
@@ -60,7 +60,7 @@
                         <!-- Passenger  -->
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Passenger ( 10 - 75 )</h3>
+                                <h3 class="font-semibold">Passenger ( 10 - 75 years old )</h3>
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.passenger_price }} Dh</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
                             </div>
@@ -88,7 +88,7 @@
                         <!-- Child  -->
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Child ( 5 - 9 )</h3>
+                                <h3 class="font-semibold ">Child ( 5  - 9 years old )</h3>
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.child_price }} Dh</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
                             </div>
@@ -318,7 +318,7 @@ function book() {
 }
 
 function trackPurchase() {
-    
+
     gtag('event', 'conversion', {'send_to': 'AW-11385971321/f0asCPKyo5oZEPnEoLUq'});
 }
 </script>
