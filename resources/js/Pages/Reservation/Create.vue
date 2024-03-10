@@ -317,48 +317,11 @@ function book() {
     form.post(route('reservation.store', pack));
 }
 
-function trackPurchase(amount) {
-    fbq('track', 'Purchase', {currency: "EUR", value: amount});
-    return amount
+function trackPurchase() {
+    
+    gtag('event', 'conversion', {'send_to': 'AW-11385971321/f0asCPKyo5oZEPnEoLUq'});
 }
 </script>
 
-<style>
-/* Remove increment and decrement arrows on hover */
-input[type="number"] {
-    /* Firefox */
-    -moz-appearance: textfield;
-    /* Webkit browsers */
-    -webkit-appearance: none;
-    /* Edge */
-    appearance: none;
-}
 
-/* Reset styles for number input in Firefox */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Remove arrows on hover in Firefox */
-input[type="number"]:hover::-webkit-inner-spin-button,
-input[type="number"]:hover::-webkit-outer-spin-button {
-    display: none;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 2px;
-    opacity: 0.6;
-    filter: invert(0.8);
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-    opacity: 1
-}
-
-
-</style>
 
