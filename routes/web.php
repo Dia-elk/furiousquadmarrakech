@@ -10,6 +10,7 @@ use App\Http\Controllers\ParaglidingController;
 use App\Http\Controllers\QuadController;
 use App\Http\Controllers\ReservationController;
 use App\Mail\ReservationMail;
+use App\Models\FeedBack;
 use App\Models\Pack;
 
 use Illuminate\Support\Facades\Mail;
@@ -37,9 +38,8 @@ Route::get('/', function () {
         $buggyPack,
         $motocrossPack,
     ];
-    return Inertia::render('Welcome', [
-        'packs' => $packs,
-    ]);
+
+    return Inertia::render('Welcome',compact('packs'));
 })->name('welcome');
 
 Route::get('/email', function () {

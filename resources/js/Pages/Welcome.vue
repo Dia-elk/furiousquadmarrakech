@@ -9,8 +9,10 @@
         <HeroSection/>
         <StartedPacks :packs="packs"/>
         <AboutSection/>
+
         <WhyUsSection/>
         <FAQ/>
+        <FeedBackSection/>
         <ContactSection/>
     </MainLayout>
 
@@ -27,6 +29,7 @@ import WhyUsSection from "@/Components/sections/WhyUsSection.vue";
 import StartedPacks from "@/Components/sections/StartedPacks.vue";
 import ContactSection from "@/Components/sections/ContactSection.vue";
 import FAQ from "@/Components/sections/FAQ.vue";
+import FeedBackSection from "@/Components/sections/FeedBackSection.vue";
 
 defineProps({
     packs: Array,

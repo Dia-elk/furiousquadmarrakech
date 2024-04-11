@@ -4,6 +4,7 @@
         <slot/>
         <PackDescriptions/>
         <FAQ/>
+        <FeedBackSection/>
         <ContactSection/>
     </MainLayout>
 </template>
@@ -14,6 +15,7 @@ import VehicleHeroSection from "@/Components/sections/VehicleHeroSection.vue";
 import PackDescriptions from "@/Components/PackDescriptions.vue";
 import FAQ from "@/Components/sections/FAQ.vue";
 import ContactSection from "@/Components/sections/ContactSection.vue";
+import FeedBackSection from "@/Components/sections/FeedBackSection.vue";
 
 defineProps({
     title: String,
