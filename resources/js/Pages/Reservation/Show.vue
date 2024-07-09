@@ -43,7 +43,7 @@
 
                             <div class="flex justify-between">
                                 <p class="text-md font-medium text-gray-400">Total Price : </p>
-                                <p class="text-sm text-gray-400"> {{ reservation.total_price }} Dh</p>
+                                <p class="text-sm text-gray-400"> {{ reservation.total_price }} MAD</p>
                             </div>
                         </div>
 

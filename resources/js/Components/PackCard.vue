@@ -7,14 +7,14 @@
                  <div class="flex justify-center">
                      <p>{{price}}</p>
                      <p class=" text-xs">.{{decimalValue}}</p>
-                     <p class="ml-2">Dh</p>
+                     <p class="ml-2">MAD</p>
                  </div>
 
                    <div v-if="pack.old_price" class="flex justify-center items-start  relative text-gray-500 w-fit">
                        <div class="w-full h-[2px] bg-[#c10c10] absolute top-[10px] -rotate-12"></div>
                        <p class="text-sm">{{pack.old_price}}</p>
                        <p class="text-[8px]">.{{decimalValue}}</p>
-                       <p class="ml-2 text-sm">Dh</p>
+                       <p class="ml-2 text-sm">MAD</p>
                    </div>
 
                </div>

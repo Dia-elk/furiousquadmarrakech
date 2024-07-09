@@ -15,7 +15,7 @@
                 <PackFeature :title="'Dinner complete'" :is-include="true"/>
                 <PackFeature :title="'Equipments'" :is-include="true"/>
                 <PackFeature :title="'Furious Scarf'" :is-include="true"/>
-                <PackFeature v-if="pack.vehicle.id === 3" :title="'Drift'" :is-include="true"/>
+                <PackFeature v-if="pack.vehicle.id === 3 || pack.vehicle.id === 4" :title="'Drift'" :is-include="true"/>
             </div>
         </div>
         <div class="h-[50px] flex justify-center items-center ">

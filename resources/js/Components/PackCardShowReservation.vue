@@ -6,7 +6,7 @@
                 <div class="flex text-xl text-gray-300 font-bold justify-center mt-1">
                     <p >{{price}}</p>
                     <p class=" text-xs">.{{decimalValue}}</p>
-                    <p class="ml-2">Dh</p>
+                    <p class="ml-2">MAD</p>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@
                 <PackFeature :title="'Dinner complete'" :is-include="pack.dinner"/>
                 <PackFeature :title="'Equipments'" :is-include="pack.equipments"/>
                 <PackFeature :title="'Furious Scarf'" :is-include="pack.desert_scarf"/>
-                <PackFeature v-if="pack.vehicle.id === 3" :title="'Drift'" :is-include="pack.drift"/>
+                <PackFeature v-if="pack.vehicle.id === 3 || pack.vehicle.id === 4" :title="'Drift'" :is-include="pack.drift"/>
             </div>
         </div>
     </div>
