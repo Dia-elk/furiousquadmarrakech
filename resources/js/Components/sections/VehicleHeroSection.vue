@@ -14,6 +14,8 @@
             <img :src="mobileImage" class="w-full h-full object-cover z-0 md:hidden block" :alt="title">
         </div>
         <div class="w-full h-full absolute top-0 bg-gradient-to-b from-[#050403]/0 via-[#050403]/10 to-[#050403]">
+        </div>
+        <div v-if="$page.url.startsWith('/can-am-marrakech')" class="w-full h-full absolute top-0 bg-black/40">
 
         </div>
         <div class="absolute bottom-4 w-full flex justify-center items-center ">
@@ -23,9 +25,9 @@
 </template>
 
 <script setup>
-import MyButton from "@/Components/MyButton.vue";
+
 import ScrollMouse from "@/Components/ScrollMouse.vue";
-import {ref} from "vue";
+
 
 defineProps({
     image: String,

@@ -7,4 +7,5 @@ enum VehicleEnum : int
     case BUGGY = 1;
     case QUAD = 2;
     case MOTOCROSS = 3;
+    case CAN_AM = 4;
 }

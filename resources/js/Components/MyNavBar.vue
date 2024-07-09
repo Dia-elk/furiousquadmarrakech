@@ -17,8 +17,8 @@
             <MyNavLink :is-active="$page.url.startsWith('/motocross-marrakech')" :href="route('motocross')">
                 Motocross
             </MyNavLink>
-            <MyNavLink :is-active="$page.url.startsWith('/paragliding-marrakech')" :href="route('paragliding')">
-                Paragliding
+            <MyNavLink :is-active="$page.url.startsWith('/can-am-marrakech')" :href="route('can-am')">
+                Can-Am
             </MyNavLink>
             <MyNavLink v-if="true" :is-active="$page.url.startsWith('/furious')" :href="route('furious')">
                 Furious
@@ -51,7 +51,7 @@
                     <MyNavLink :href="route('buggy')" :is-active="$page.url.startsWith('/buggy-marrakech')">Buggy</MyNavLink>
                     <MyNavLink :href="route('quad')" :is-active="$page.url.startsWith('/quad-marrakech')">Quad</MyNavLink>
                     <MyNavLink :href="route('motocross')" :is-active="$page.url.startsWith('/motocross-marrakech')">Motocross</MyNavLink>
-                    <MyNavLink :href="route('paragliding')" :is-active="$page.url.startsWith('/paragliding-marrakech')">Paragliding</MyNavLink>
+                    <MyNavLink :href="route('can-am')" :is-active="$page.url.startsWith('/can-am-marrakech')">Can-Am</MyNavLink>
                     <MyNavLink v-if="true" :href="route('furious')" :is-active="$page.url.startsWith('/furious')">
                         Furious
                     </MyNavLink>

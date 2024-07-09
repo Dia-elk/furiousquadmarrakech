@@ -3,6 +3,7 @@
 
 use App\Enum\VehicleEnum;
 use App\Http\Controllers\BuggyController;
+use App\Http\Controllers\CanAmController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FuriousController;
 use App\Http\Controllers\MotocrossController;
@@ -55,8 +56,9 @@ Route::get('/quad-marrakech', [QuadController::class, 'index'])->name('quad');
 // MOTOCROSS
 Route::get('/motocross-marrakech', [MotocrossController::class, 'index'])->name('motocross');
 
-// PARAPENTE
-Route::get('/paragliding-marrakech', [ParaglidingController::class, 'index'])->name('paragliding');
+// CAN_AM
+Route::get('/can-am-marrakech', [CanAmController::class, 'index'])->name('can-am');
+
 
 // FURIOUS
 Route::get('/furious', [FuriousController::class, 'index'])->name('furious');
