@@ -30,7 +30,7 @@
                 <PackFeature :title="'Dinner complete'" :is-include="pack.dinner"/>
                 <PackFeature :title="'Equipments'" :is-include="pack.equipments"/>
                 <PackFeature :title="'Furious Scarf'" :is-include="pack.desert_scarf"/>
-                <PackFeature v-if="pack.vehicle.id === 3" :title="'Drift'" :is-include="pack.drift"/>
+                <PackFeature v-if="pack.vehicle.id === 3 || pack.vehicle.id === 4" :title="'Drift'" :is-include="pack.drift"/>
             </div>
         </div>
         <div class="h-[50px] flex justify-center items-center ">
