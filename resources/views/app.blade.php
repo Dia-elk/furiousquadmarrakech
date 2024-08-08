@@ -31,8 +31,19 @@
                        src="https://www.facebook.com/tr?id=261033239998190&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Meta Pixel Code -->
-        <!-- Scripts -->
-
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/6568c3afff45ca7d47855839/1hggjopol';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YDKKHQPKW"></script>
         <script>
@@ -42,6 +53,9 @@
 
             gtag('config', 'G-1YDKKHQPKW');
         </script>
+        <!-- Scripts -->
+
+
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
