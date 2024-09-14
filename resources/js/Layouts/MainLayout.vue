@@ -46,6 +46,12 @@ import Facebook from "@/Icons/Facebook.vue";
 import Tripadvisor from "@/Icons/Tripadvisor.vue";
 import Airbnb from "@/Icons/Airbnb.vue";
 import WhatsApp from "@/Icons/WhatsApp.vue";
+import Hotjar from '@hotjar/browser';
+
+const siteId = 5135172;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 const date = new Date();
 
