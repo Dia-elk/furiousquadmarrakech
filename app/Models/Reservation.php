@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enum\SourceEnum;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,9 +11,9 @@ use function Termwind\render;
 
 class Reservation extends Model
 {
-    use HasFactory,HasUuids;
+    use HasFactory, HasUuids;
 
-    protected $fillable =[
+    protected $fillable = [
         'pack_id',
         'customer_id',
         'is_confirmed',
@@ -23,15 +24,20 @@ class Reservation extends Model
         'drivers',
         'passengers',
         'children',
-        'total_price'
+        'total_price',
+        'source'
     ];
 
-    public function pack():BelongsTo
+    protected $casts = [
+        'source' => SourceEnum::class,
+    ];
+
+    public function pack(): BelongsTo
     {
         return $this->belongsTo(Pack::class);
     }
 
-    public function customer():BelongsTo
+    public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);
     }
