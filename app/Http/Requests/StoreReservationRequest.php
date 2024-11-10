@@ -27,13 +27,15 @@ class StoreReservationRequest extends FormRequest
         $yesterday = Carbon::yesterday();
         //dd('in');
         return [
-            'email' => ['required','email','max:255'],
-            'phone' => ['required' ,'numeric','max:255'],
-            'drivers' => ['required','numeric','min:1','max:255'],
-            'passenger' => ['numeric','min:0','max:255'],
-            'child' => ['numeric','min:0','max:255'],
-            'date' => ['date'],
-            'price' => ['required','numeric','max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'phone' => ['required', 'string', 'max:255', 'min:7'],
+            'name' => ['required', 'string', 'max:255', 'min:3'],
+            'country' => ['required', 'string', 'max:255', 'min:3'],
+            'driver' => ['required', 'numeric', 'min:1', 'max:255'],
+            'passenger' => ['numeric', 'min:0', 'max:255'],
+            'child' => ['numeric', 'min:0', 'max:255'],
+            'date' => ['required', 'date'],
+            'time' => ['required', 'string'],
         ];
     }
 }

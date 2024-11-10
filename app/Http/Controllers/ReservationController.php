@@ -28,8 +28,10 @@ class ReservationController extends Controller
         ]);
     }
 
-    public function store(Request $request, Pack $pack,  ReservationService $reservationService)
+    public function store(StoreReservationRequest $request, Pack $pack,  ReservationService $reservationService)
     {
+
+
 
           $reservation = $reservationService->create($request, $pack);
 
