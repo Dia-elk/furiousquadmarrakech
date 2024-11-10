@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ApiContactController;
 use App\Http\Controllers\Api\ApiReservationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('furious/{pack:slug}/book',[ApiReservationController::class,'store']);
+Route::post('furious/contact',[ApiContactController::class,'store']);
