@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Enum\SourceEnum;
 use App\Models\Customer;
 use App\Models\Pack;
 use App\Models\Reservation;
@@ -46,8 +47,11 @@ class ReservationNotification extends Notification implements ShouldQueue
 
 🎉 New Reservation 🎉
 
+
+Source: '.$this->reservation->source->value===SourceEnum::FURIOUS_EN->value?'furiousquadmarrakech.com':'quad-amarrakech.com'.'.
 Email: '.$this->reservation->customer->email.'.
 Phone: '.$this->reservation->customer->phone_number.'.
+Country: '.$this->reservation->country.'.
 The Pack: '.$this->reservation->pack->name.'.
 Reservation date : '.$this->reservation->reservation_date.'.
 Reservation Time : '.$this->reservation->reservation_time.'.
