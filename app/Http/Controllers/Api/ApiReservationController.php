@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Enum\SourceEnum;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreReservationRequest;
 use App\Mail\ReservationMail;
@@ -17,7 +18,7 @@ class ApiReservationController extends Controller
     public function store(StoreReservationRequest $request, Pack $pack, ReservationService $reservationService)
     {
         //dd($request->all());
-        $reservation = $reservationService->create($request, $pack);
+        $reservation = $reservationService->create($request, $pack,SourceEnum::FURIOUS_FR);
 
         // Sending Notification to the  owner and email to the client
         Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));

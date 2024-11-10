@@ -48,7 +48,7 @@ class ReservationNotification extends Notification implements ShouldQueue
 🎉 New Reservation 🎉
 
 
-Source: '.$this->reservation->source->value===SourceEnum::FURIOUS_EN->value?'furiousquadmarrakech.com':'quad-amarrakech.com'.'.
+Source: '.$this->reservation->source->value.'.
 Email: '.$this->reservation->customer->email.'.
 Phone: '.$this->reservation->customer->phone_number.'.
 Country: '.$this->reservation->country.'.

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enum\SourceEnum;
 use App\Http\Requests\StoreReservationRequest;
 use App\Mail\ReservationMail;
 use App\Models\Pack;
@@ -33,7 +34,7 @@ class ReservationController extends Controller
 
 
 
-          $reservation = $reservationService->create($request, $pack);
+          $reservation = $reservationService->create($request, $pack,SourceEnum::FURIOUS_EN);
 
           // Sending Notification to the  owner and email to the client
           Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
