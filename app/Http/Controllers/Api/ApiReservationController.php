@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreReservationRequest;
 use App\Mail\ReservationMail;
 use App\Models\Pack;
+use App\Models\Reservation;
 use App\Notifications\ReservationNotification;
 use App\Services\Reservation\ReservationService;
 use Illuminate\Http\Request;
@@ -21,10 +22,16 @@ class ApiReservationController extends Controller
             'pack' => $pack,
         ]);
     }
+    public function getReservation(Reservation $reservation)
+    {
+        return response()->json([
+            'reservation' => $reservation,
+        ]);
+    }
 
     public function store(StoreReservationRequest $request, Pack $pack, ReservationService $reservationService)
     {
-        //dd($request->all());
+       
         $reservation = $reservationService->create($request, $pack, SourceEnum::FURIOUS_FR);
 
         // Sending Notification to the  owner and email to the client

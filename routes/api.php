@@ -25,6 +25,7 @@ Route::group([
 
 ],function (){
     Route::get('furious/{pack:slug}',[ApiReservationController::class,'getPack']);
+    Route::get('furious/reservation/{reservation}',[ApiReservationController::class,'getReservation']);
     Route::post('furious/{pack:slug}/book',[ApiReservationController::class,'store']);
     Route::post('furious/contact',[ApiContactController::class,'store']);
     Route::get('furious/packs/quad',[ApiPackController::class,'quad']);
