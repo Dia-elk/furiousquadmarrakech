@@ -177,6 +177,7 @@
                                     <option>15:00</option>
                                     <option>16:00</option>
                                     <option>17:00</option>
+                                    <option>18:00</option>
                                 </select>
                             </label>
                         </div>
