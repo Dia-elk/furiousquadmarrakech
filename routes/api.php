@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group([
-    'middleware'=>'throttle:60,1'
+
 ],function (){
     Route::get('furious/{pack:slug}',[ApiReservationController::class,'getPack']);
     Route::post('furious/{pack:slug}/book',[ApiReservationController::class,'store']);
