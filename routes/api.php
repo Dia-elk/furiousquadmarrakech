@@ -31,4 +31,4 @@ Route::group([
     Route::get('furious/packs/buggy',[ApiPackController::class,'buggy']);
     Route::get('furious/packs/motocross',[ApiPackController::class,'motocross']);
     Route::get('furious/packs/can-am',[ApiPackController::class,'canAm']);
-})
+});
