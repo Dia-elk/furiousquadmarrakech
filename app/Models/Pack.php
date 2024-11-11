@@ -31,6 +31,8 @@ class Pack extends Model
         'equipments',
         'desert_scarf',
         'drift',
+        'have_passenger',
+        'have_child',
     ];
 
 
