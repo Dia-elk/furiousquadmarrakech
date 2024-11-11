@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('furious/{pack:slug}',[ApiReservationController::class,'getPack']);
 Route::post('furious/{pack:slug}/book',[ApiReservationController::class,'store']);
 Route::post('furious/contact',[ApiContactController::class,'store']);
 Route::get('furious/packs/quad',[ApiPackController::class,'quad']);

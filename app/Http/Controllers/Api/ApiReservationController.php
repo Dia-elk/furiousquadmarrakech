@@ -15,10 +15,17 @@ use Illuminate\Support\Facades\Notification;
 
 class ApiReservationController extends Controller
 {
+    public function getPack(Pack $pack)
+    {
+        return response()->json([
+            'pack' => $pack,
+        ]);
+    }
+
     public function store(StoreReservationRequest $request, Pack $pack, ReservationService $reservationService)
     {
         //dd($request->all());
-        $reservation = $reservationService->create($request, $pack,SourceEnum::FURIOUS_FR);
+        $reservation = $reservationService->create($request, $pack, SourceEnum::FURIOUS_FR);
 
         // Sending Notification to the  owner and email to the client
         Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
@@ -28,4 +35,6 @@ class ApiReservationController extends Controller
             'reservation' => $reservation
         ]);
     }
+
+
 }
