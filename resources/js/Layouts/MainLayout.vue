@@ -16,7 +16,7 @@
             <p class="text-gray-500 lg:text-[12px] text-[10px]">Made with <span class="text-[#c10c10]">♥</span> by <span class="text-gray-200 lg:text-[12px] text-[8px] font-bold underline cursor-pointer"><a href="https://diaelk.dev/" target="_blank">Dia</a></span></p>
         </div>
         <div class="flex gap-4">
-            <a target="_blank" href="https://www.instagram.com/furious.quad/">
+            <a target="_blank" href="https://www.instagram.com/furious.experience/">
                 <Instagram/>
             </a>
             <a v-if="false" target="_blank" href="#">
