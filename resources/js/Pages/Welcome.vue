@@ -9,7 +9,6 @@
         <HeroSection/>
         <StartedPacks :packs="packs"/>
         <AboutSection/>
-
         <WhyUsSection/>
         <FAQ/>
         <FeedBackSection/>
