@@ -15,6 +15,7 @@ use App\Services\Customer\CustomerService;
 use App\Services\Reservation\ReservationService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
@@ -24,29 +25,32 @@ class ReservationController extends Controller
 {
     public function create(Pack $pack)
     {
-        try{
+        try {
 
             return Inertia::render('Reservation/Create', [
                 'pack' => $pack,
             ]);
-        }catch (Exception $exception)
-        {
+        } catch (Exception $exception) {
             dd($exception->getMessage());
         }
     }
 
-    public function store(StoreReservationRequest $request, Pack $pack,  ReservationService $reservationService)
+    public function store(StoreReservationRequest $request, Pack $pack, ReservationService $reservationService)
     {
 
+        try {
 
+            $reservation = $reservationService->create($request, $pack, SourceEnum::FURIOUS_EN);
 
-          $reservation = $reservationService->create($request, $pack,SourceEnum::FURIOUS_EN);
+            // Sending Notification to the  owner and email to the client
+            Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
+            Notification::route('slack', config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
 
-          // Sending Notification to the  owner and email to the client
-          Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
-          Notification::route('slack', config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
+            return to_route('reservation.show', $reservation);
+        } catch (\Exception $e) {
 
-          return to_route('reservation.show', $reservation);
+            dd($e->getMessage());
+        }
     }
 
     public function show(Reservation $reservation)

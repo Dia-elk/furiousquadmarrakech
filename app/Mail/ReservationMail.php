@@ -10,18 +10,18 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ReservationMail extends Mailable implements ShouldQueue
+class ReservationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    private $reservation;
 
-    public function __construct(Reservation $reservation)
+
+    public function __construct(private readonly Reservation $reservation)
     {
-        $this->reservation = $reservation;
+
     }
 
     /**

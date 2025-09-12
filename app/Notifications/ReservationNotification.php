@@ -40,7 +40,6 @@ class ReservationNotification extends Notification implements ShouldQueue
      */
     public function toSlack(object $notifiable): SlackMessage
     {
-        $source = $this->reservation->source->value===SourceEnum::FURIOUS_EN->value?'furiousquadmarrakech.com':'quad-amarrakech.com';
         return (new SlackMessage)
                     ->content(
                         '
@@ -48,8 +47,6 @@ class ReservationNotification extends Notification implements ShouldQueue
 
 🎉 New Reservation 🎉
 
-
-Source: '.$source.'.
 Email: '.$this->reservation->customer->email.'.
 Phone: '.$this->reservation->customer->phone_number.'.
 Country: '.$this->reservation->country.'.

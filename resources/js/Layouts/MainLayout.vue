@@ -5,35 +5,7 @@
     <main class="bg-[#050403]">
         <slot/>
     </main>
-    <footer
-        class="h-[100px] flex flex-col-reverse  justify-center  items-center px-2 md:p-10 border-t-[0.6px] border-gray-600 mx-6 lg:mx-auto lg:max-w-7xl">
-        <div class="hidden md:flex flex-col md:flex-row justify-center items-center mt-2 md:mt-2 md:gap-1">
-            <p class="text-gray-500 lg:text-[12px] text-[10px]">© {{ date.getFullYear() }} Furious Quad Marrakech </p>
-            <p class="text-gray-500 lg:text-[12px] text-[10px]">Made with <span class="text-[#c10c10]">♥</span> by <span class="text-gray-200 lg:text-[12px] text-[8px] font-bold underline cursor-pointer"><a href="https://diagital.studio/" target="_blank">Diagital Studio</a></span></p>
-        </div>
-        <div class="md:hidden flex flex-col justify-center items-center mt-2">
-            <p class="text-gray-500 lg:text-[12px] text-[10px]">© {{ date.getFullYear() }} Furious Quad Marrakech </p>
-            <p class="text-gray-500 lg:text-[12px] text-[10px]">Made with <span class="text-[#c10c10]">♥</span> by <span class="text-gray-200 lg:text-[12px] text-[8px] font-bold underline cursor-pointer"><a href="https://diagital.studio/" target="_blank">Diagital Studio</a></span></p>
-        </div>
-        <div class="flex gap-4">
-            <a target="_blank" href="https://www.instagram.com/furious.experience/">
-                <Instagram/>
-            </a>
-            <a v-if="false" target="_blank" href="#">
-                <Facebook/>
-            </a>
-            <a target="_blank" href="https://www.tiktok.com/@furious.quad">
-                <Tiktok/>
-            </a>
-            <a target="_blank" href="https://www.airbnb.fr/users/show/543464602">
-                <Airbnb/>
-            </a>
-            <a target="_blank"
-               href="https://www.tripadvisor.com/Attraction_Review-g293734-d26818101-Reviews-Furious_Quad_Marrakech-Marrakech_Marrakech_Safi.html">
-                <Tripadvisor/>
-            </a>
-        </div>
-    </footer>
+  <MyFooter/>
 
 </template>
 
@@ -46,6 +18,7 @@ import Facebook from "@/Icons/Facebook.vue";
 import Tripadvisor from "@/Icons/Tripadvisor.vue";
 import Airbnb from "@/Icons/Airbnb.vue";
 import WhatsApp from "@/Icons/WhatsApp.vue";
+import MyFooter from "@/Components/MyFooter.vue";
 
 
 
