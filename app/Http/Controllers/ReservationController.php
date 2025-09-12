@@ -24,9 +24,15 @@ class ReservationController extends Controller
 {
     public function create(Pack $pack)
     {
-        return Inertia::render('Reservation/Create', [
-            'pack' => $pack,
-        ]);
+        try{
+
+            return Inertia::render('Reservation/Create', [
+                'pack' => $pack,
+            ]);
+        }catch (Exception $exception)
+        {
+            dd($exception->getMessage());
+        }
     }
 
     public function store(StoreReservationRequest $request, Pack $pack,  ReservationService $reservationService)

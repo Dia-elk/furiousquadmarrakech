@@ -14,8 +14,10 @@ class BuggyController extends Controller
     {
 
         $packs = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::BUGGY)->get();
+
         return Inertia::render('Buggy/Index', [
             'packs' => $packs,
         ]);
+
     }
 }
