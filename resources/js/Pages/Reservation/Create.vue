@@ -1,6 +1,6 @@
 <template>
     <Head>
-        <title>Reservation</title>
+        <title>{{ $t('reservation.title') }}</title>
     </Head>
     <MainLayout>
         <div class="flex w-full flex-col justify-center items-center text-white space-y-6 mb-24">
@@ -18,115 +18,77 @@
                     {{ pack.name }}
                 </h1>
             </div>
-            <h3>
-                Order Details:
-            </h3>
+            <h3>{{ $t('reservation.order_details') }}</h3>
             <!-- form -->
-            <div class="w-full px-6  md:px-24 lg:px-48">
+            <div class="w-full px-6 md:px-24 lg:px-48">
                 <form class="flex gap-4 flex-col"
-                      @submit.prevent="form.price=totalPrice; form.post(route('reservation.store', pack),{
-                          onSuccess: trackPurchase(totalPrice),
-                      })">
+                      @submit.prevent="form.price=totalPrice; form.post(route('reservation.store', pack),{ onSuccess: trackPurchase(totalPrice) })">
                     <!-- form for driver and passenger and child -->
                     <div v-if="!showDetailsForm" class="flex gap-4 flex-col">
 
-                        <!-- Driver  -->
+                        <!-- Driver -->
                         <Divider/>
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Driver ( 14  - 75 years old) </h3>
+                                <h3 class="font-semibold">{{ $t('reservation.driver') }} (14-75 {{ $t('reservation.years_old') }})</h3>
                                 <p class="text-xs"> {{ pack.price }} Dh</p>
                             </div>
                             <div class="w-36 bg-neutral-800 flex justify-between items-center">
-                                <div @click="minusDriver"
-                                     class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">
-                                    -
-                                </div>
-                                <input
-                                    v-model="form.driver"
-                                    type="number" min="1" max="100" disabled
-                                    class="bg-transparent  border-none ring-0 focus:border-none focus:ring-0  w-full  text-center"
-                                >
-
-                                <div @click="addDriver"
-                                     class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">
-                                    +
-                                </div>
+                                <div @click="minusDriver" class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">-</div>
+                                <input v-model="form.driver" type="number" min="1" max="100" disabled
+                                       class="bg-transparent border-none ring-0 focus:border-none focus:ring-0 w-full text-center">
+                                <div @click="addDriver" class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">+</div>
                             </div>
                         </label>
                         <Divider/>
-                        <!-- /Driver  -->
+                        <!-- /Driver -->
 
-                        <!-- Passenger  -->
+                        <!-- Passenger -->
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Passenger ( 10 - 75 years old )</h3>
+                                <h3 class="font-semibold">{{ $t('reservation.passenger') }} (10-75 {{ $t('reservation.years_old') }})</h3>
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.passenger_price }} Dh</p>
-                                <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
+                                <p v-if="pack.vehicle_id === 3" class="text-xs">{{ $t('reservation.not_available') }}</p>
                             </div>
-                            <div v-if="pack.vehicle_id !== 3"
-                                 class="w-36 bg-neutral-800 flex justify-between items-center">
-                                <div @click="minusPassenger"
-                                     class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">
-                                    -
-                                </div>
-                                <input
-                                    v-model="form.passenger"
-                                    type="number" max="100" disabled
-                                    class="bg-transparent  border-none ring-0 focus:border-none focus:ring-0  w-full  text-center"
-                                >
-
-                                <div @click="addPassenger"
-                                     class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">
-                                    +
-                                </div>
+                            <div v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
+                                <div @click="minusPassenger" class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">-</div>
+                                <input v-model="form.passenger" type="number" max="100" disabled
+                                       class="bg-transparent border-none ring-0 focus:border-none focus:ring-0 w-full text-center">
+                                <div @click="addPassenger" class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">+</div>
                             </div>
                         </label>
                         <Divider/>
-                        <!-- /Passenger  -->
+                        <!-- /Passenger -->
 
-                        <!-- Child  -->
+                        <!-- Child -->
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold ">Child ( 5  - 9 years old )</h3>
+                                <h3 class="font-semibold">{{ $t('reservation.child') }} (5-9 {{ $t('reservation.years_old') }})</h3>
                                 <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.child_price }} Dh</p>
-                                <p v-if="pack.vehicle_id === 3" class="text-xs">Not available for Motocross</p>
+                                <p v-if="pack.vehicle_id === 3" class="text-xs">{{ $t('reservation.not_available') }}</p>
                             </div>
-                            <div v-if="pack.vehicle_id !== 3"
-                                 class="w-36 bg-neutral-800 flex justify-between items-center">
-                                <div @click="minusChild"
-                                     class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">
-                                    -
-                                </div>
-                                <input
-                                    v-model="form.child"
-                                    type="number" max="100" disabled
-                                    class="bg-transparent  border-none ring-0 focus:border-none focus:ring-0  w-full  text-center"
-                                >
-
-                                <div @click="addChild"
-                                     class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">
-                                    +
-                                </div>
+                            <div v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
+                                <div @click="minusChild" class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">-</div>
+                                <input v-model="form.child" type="number" max="100" disabled
+                                       class="bg-transparent border-none ring-0 focus:border-none focus:ring-0 w-full text-center">
+                                <div @click="addChild" class="w-full cursor-pointer flex justify-center items-center border-l border-gray-600">+</div>
                             </div>
                         </label>
                         <Divider/>
-                        <!-- /Child  -->
+                        <!-- /Child -->
 
-                        <!-- Total Price  -->
+                        <!-- Total Price -->
                         <label class="flex justify-between items-center">
                             <div>
-                                <h3 class="font-semibold">Total Price</h3>
+                                <h3 class="font-semibold">{{ $t('reservation.total_price') }}</h3>
                             </div>
                             <div class="w-36 bg-neutral-800 flex justify-between items-center">
-                                <input
-                                    type="number" min="{{pack.price}}" disabled v-model="totalPrice"
-                                    class="bg-transparent  border-none ring-0 focus:border-none focus:ring-0  w-full  text-center"
-                                >
+                                <input type="number" min="{{pack.price}}" disabled v-model="totalPrice"
+                                       class="bg-transparent border-none ring-0 focus:border-none focus:ring-0 w-full text-center">
                             </div>
                         </label>
                         <Divider/>
-                        <!-- /Total Price  -->
+                        <!-- /Total Price -->
                     </div>
                     <!-- /form for driver and passenger and child -->
 
@@ -134,40 +96,34 @@
                     <div v-if="showDetailsForm" class="flex flex-col gap-6 mb-6 w-full h-full">
                         <div class="flex md:flex-row flex-col gap-10 w-full">
                             <label class="w-full">
-                                <h3 class="font-semibold">Full Name</h3>
-                                <input v-model="form.name" type="text" required
-                                       class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.full_name') }}</h3>
+                                <input v-model="form.name" type="text" required class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
-                                <h3 class="font-semibold">Country</h3>
-                                <input v-model="form.country" type="text"
-                                       class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.country') }}</h3>
+                                <input v-model="form.country" type="text" class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
 
-                        <div class="flex md:flex-row flex-col   gap-10 w-full">
+                        <div class="flex md:flex-row flex-col gap-10 w-full">
                             <label class="w-full">
-                                <h3 class="font-semibold">Email</h3>
-                                <input v-model="form.email" type="email" required
-                                       class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.email') }}</h3>
+                                <input v-model="form.email" type="email" required class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
-                                <h3 class="font-semibold">Phone Number</h3>
-                                <input v-model="form.phone" type="tel" required
-                                       class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.phone') }}</h3>
+                                <input v-model="form.phone" type="tel" required class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                         </div>
 
-                        <div class="flex md:flex-row flex-col  gap-10 w-full">
+                        <div class="flex md:flex-row flex-col gap-10 w-full">
                             <label class="w-full">
-                                <h3 class="font-semibold">Date</h3>
-                                <input v-model="form.date" type="date" :min="today" required
-                                       class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.date') }}</h3>
+                                <input v-model="form.date" type="date" :min="today" required class="bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                             </label>
                             <label class="w-full">
-                                <h3 class="font-semibold">Time</h3>
-                                <select v-model="form.time"
-                                        class="input-date-icon bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                                <h3 class="font-semibold">{{ $t('reservation.time') }}</h3>
+                                <select v-model="form.time" class="input-date-icon bg-neutral-900 border-none ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
                                     <option>09:00</option>
                                     <option>10:00</option>
                                     <option>11:00</option>
@@ -185,45 +141,35 @@
                     <!-- /form for customer details -->
                     <div v-if="!showDetailsForm" class="flex justify-end w-full">
                         <div class="w-48">
-                            <MyButton @click="showDetailsForm=true">
-                                Next
-                            </MyButton>
+                            <MyButton @click="showDetailsForm=true">{{ $t('reservation.next') }}</MyButton>
                         </div>
                     </div>
 
                     <div v-if="showDetailsForm" class="flex justify-between w-full">
-                        <div class="w-48  cursor-pointer  flex justify-center items-center gap-4"
+                        <div class="w-48 cursor-pointer flex justify-center items-center gap-4"
                              @click="showDetailsForm=false" @mouseenter="isPreviousHover=true"
                              @mouseleave="isPreviousHover=false">
                             <div class="transition-all duration-500 " :class="isPreviousHover?'mr-4':''">
-                                <svg width="55" height="8" viewBox="0 0 55 8" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M0.646443 3.64644C0.451181 3.8417 0.451181 4.15829 0.646443 4.35355L3.82842 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.73079 7.34027 4.73079 7.02368 4.53553 6.82842L1.7071 4L4.53553 1.17157C4.73079 0.976306 4.73079 0.659724 4.53553 0.464462C4.34027 0.2692 4.02369 0.269199 3.82842 0.464462L0.646443 3.64644ZM55 3.5L0.999996 3.5L0.999996 4.5L55 4.5L55 3.5Z"
-                                        fill="white"/>
+                                <svg width="55" height="8" viewBox="0 0 55 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.646443 3.64644C0.451181 3.8417 0.451181 4.15829 0.646443 4.35355L3.82842 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.73079 7.34027 4.73079 7.02368 4.53553 6.82842L1.7071 4L4.53553 1.17157C4.73079 0.976306 4.73079 0.659724 4.53553 0.464462C4.34027 0.2692 4.02369 0.269199 3.82842 0.464462L0.646443 3.64644ZM55 3.5L0.999996 3.5L0.999996 4.5L55 4.5L55 3.5Z" fill="white"/>
                                 </svg>
-
                             </div>
-                            <div>
-                                Previous
-                            </div>
+                            <div>{{ $t('reservation.previous') }}</div>
                         </div>
                         <button class="w-48" type="submit">
                             <MyButton>
-                                <p v-if="!form.processing">Book Now</p>
+                                <p v-if="!form.processing">{{ $t('reservation.book_now') }}</p>
                                 <Spinner v-if="form.processing"/>
                             </MyButton>
                         </button>
                     </div>
-
-
                 </form>
             </div>
             <!-- /form -->
-
         </div>
     </MainLayout>
 </template>
+
 
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";

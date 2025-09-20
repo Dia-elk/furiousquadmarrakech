@@ -17,6 +17,7 @@ use App\Models\Pack;
 
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
 
 /*
@@ -91,6 +92,11 @@ Route::get('/reviews',[MainController::class,'reviews'])->name('reviews');
 Route::get('/faq',[MainController::class,'faq'])->name('faq');
 Route::get('/privacy',[MainController::class,'privacy'])->name('privacy');
 Route::get('/terms',[MainController::class,'terms'])->name('terms');
+
+Route::get('language/{language}', function ($language) {
+    Session::put('lang', $language);
+    return back();
+})->name('language');
 
 
 require __DIR__ . '/auth.php';

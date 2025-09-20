@@ -1,15 +1,14 @@
 <template>
     <Head>
-        <title>Contact</title>
+        <title>{{ $t('contact.title') }}</title>
     </Head>
-   <MainLayout>
-       <ContactSection/>
-   </MainLayout>
+    <MainLayout>
+        <ContactSection />
+    </MainLayout>
 </template>
 
 <script setup>
-
 import ContactSection from "@/Components/sections/ContactSection.vue";
-import {Head} from "@inertiajs/vue3";
+import { Head } from "@inertiajs/vue3";
 import MainLayout from "@/Layouts/MainLayout.vue";
 </script>

@@ -33,11 +33,26 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            'feedbacks' => FeedBack::where('is_publish',true)->get(),
+            'feedbacks' => FeedBack::where('is_publish', true)->get(),
             'auth' => [
                 'user' => $request->user(),
             ],
-            'ziggy' => fn () => [
+            'locale' => app()->getLocale(),
+            "langs" => [
+                [
+                    "title" => "english",
+                    "value" => "en",
+                ],
+                [
+                    "title" => "french",
+                    "value" => "fr",
+                ],
+                [
+                    "title" => "spain",
+                    "value" => "es",
+                ],
+            ],
+            'ziggy' => fn() => [
                 ...(new Ziggy)->toArray(),
                 'location' => $request->url(),
             ],

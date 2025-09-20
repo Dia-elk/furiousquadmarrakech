@@ -1,56 +1,55 @@
 <template>
-        <div class="relative h-screen">
-            <div class="h-screen w-full bg-gradient-to-b from-[#050403] via-[#050403]/20 to-[#050403] absolute top-0 z-10 backdrop-blur-sm">
+    <div class="relative h-screen">
+        <div class="h-screen w-full bg-gradient-to-b from-[#050403] via-[#050403]/20 to-[#050403] absolute top-0 z-10 backdrop-blur-sm"></div>
+        <div class="w-full h-full absolute top-0">
+            <img src="images/heroBg.jpg" class="w-full h-full object-cover z-0 hidden md:block" :alt="$t('contactHeroAlt')">
+            <img src="images/heroBgMobile.jpg" class="w-full h-full object-cover z-0 md:hidden block" :alt="$t('contactHeroAlt')">
+        </div>
+        <div class="flex h-full w-full text-white justify-center items-center absolute top-0 z-20 mt-10 px-4">
+            <div class="max-w-7xl space-y-6">
+                <div class="text-center space-y-2">
+                    <h4 class="text-2xl font-bold">{{ $t('contactTitle') }}</h4>
+                    <p class="text-sm max-w-2xl text-gray-300">{{ $t('contactSubtitle') }}</p>
+                </div>
 
-            </div>
-            <div class="w-full h-full absolute top-0">
-                <img src="images/heroBg.jpg" class="w-full h-full object-cover z-0 hidden md:block" alt="quad and motocross in marrakech">
-                <img src="images/heroBgMobile.jpg" class="w-full h-full object-cover z-0 md:hidden block" alt="quad and motocross in marrakech">
-            </div>
-            <div class="flex h-full w-full text-white justify-center items-center absolute top-0  z-20  mt-10 px-4">
-                <div class="max-w-7xl space-y-6">
-                    <div class=" text-center space-y-2">
-                        <h4 class="text-2xl  font-bold">Contact Us</h4>
-                        <p class="text-sm max-w-2xl text-gray-300">Got a technical issue? Want to send feedback about a
-                            Furious Quad Marrakech? Need details about Reservation? Let us know.</p>
+                <form class="w-full flex flex-col gap-4"
+                      @submit.prevent="form.post(route('contact.store'), {onSuccess: successMessage})">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <label class="w-full">
+                            <h6 class="font-semibold">{{ $t('contactName') }}</h6>
+                            <input v-model="form.name" type="text"
+                                   class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600 ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                            <div class="text-sm text-[#c10c10]" v-if="form.errors.name">{{ form.errors.name }}</div>
+                        </label>
+                        <label class="w-full">
+                            <h6 class="font-semibold">{{ $t('contactEmail') }}</h6>
+                            <input v-model="form.email" type="email" required
+                                   class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600 ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
+                            <div class="text-sm text-[#c10c10]" v-if="form.errors.email">{{ form.errors.email }}</div>
+                        </label>
                     </div>
 
-                    <form class="w-full flex flex-col gap-4"
-                          @submit.prevent="form.post(route('contact.store'), {onSuccess: successMessage,})">
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <label class="w-full">
-                                <h6 class="font-semibold">Name</h6>
-                                <input v-model="form.name" type="text"
-                                       class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600 ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
-                                <div class="text-sm text-[#c10c10]" v-if="form.errors.name">{{ form.errors.name }}</div>
-                            </label>
-                            <label class="w-full">
-                                <h6 class="font-semibold">Email</h6>
-                                <input v-model="form.email" type="email" required
-                                       class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600  ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full">
-                                <div class="text-sm text-[#c10c10]" v-if="form.errors.email">{{ form.errors.email }}</div>
-                            </label>
-                        </div>
-                        <label class="w-full">
-                            <h6 class="font-semibold">Message</h6>
-                            <textarea v-model="form.message" type="text" required rows="6"
-                                      class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600  ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full"></textarea>
-                            <div class="text-sm text-[#c10c10]" v-if="form.errors.message">{{ form.errors.message }}</div>
-                        </label>
-                        <div class="flex justify-center">
-                            <button class="w-48" type="submit">
-                                <MyButton>
-                                    <p v-if="!form.processing">Send message</p>
-                                    <Spinner v-if="form.processing"/>
-                                </MyButton>
-                            </button>
-                        </div>
-                    </form>
-                    <p v-if="showSuccessMessage" class="text-center text-xs text-green-600">Your message has been sent
-                        successfully</p>
-                </div>
+                    <label class="w-full">
+                        <h6 class="font-semibold">{{ $t('contactMessage') }}</h6>
+                        <textarea v-model="form.message" type="text" required rows="6"
+                                  class="bg-neutral-900/20 backdrop-blur-sm border-neutral-600 ring-0 focus:border-[#c10c10] focus:ring-[#c10c10] w-full"></textarea>
+                        <div class="text-sm text-[#c10c10]" v-if="form.errors.message">{{ form.errors.message }}</div>
+                    </label>
+
+                    <div class="flex justify-center">
+                        <button class="w-48" type="submit">
+                            <MyButton>
+                                <p v-if="!form.processing">{{ $t('contactSendButton') }}</p>
+                                <Spinner v-if="form.processing"/>
+                            </MyButton>
+                        </button>
+                    </div>
+                </form>
+
+                <p v-if="showSuccessMessage" class="text-center text-xs text-green-600">{{ $t('contactSuccessMessage') }}</p>
             </div>
         </div>
+    </div>
 </template>
 
 <script setup>
@@ -65,7 +64,6 @@ let form = useForm({
     name: ref(''),
     email: ref(''),
     message: ref(''),
-
 })
 
 function toggleShowMessage(){

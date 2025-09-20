@@ -4,28 +4,18 @@
         <div>
             <!-- Title -->
             <div class="mx-4 md:mx-24 flex items-center gap-4">
-                <div class="h-20 bg-[#c10c10] w-2">
-                </div>
+                <div class="h-20 bg-[#c10c10] w-2"></div>
                 <div>
-                    <h3 class="text-sm text-gray-400">Who we are ?</h3>
-                    <h1 class="font-bold text-white text-4xl">About Us</h1>
+                    <h3 class="text-sm text-gray-400">{{ $t('aboutUsSubtitle') }}</h3>
+                    <h1 class="font-bold text-white text-4xl">{{ $t('aboutUsTitle') }}</h1>
                 </div>
             </div>
             <!-- /Title -->
 
             <!-- Paragraphs -->
             <div class="mt-16 mx-4 md:mx-24 text-gray-300">
-                <p>
-                    Founded with a passion for delivering high-energy experiences, Furious Quad is more than a brand;
-                    it's a commitment to exhilaration. With a heritage of expertise spanning generations, we seamlessly
-                    blend tradition with modernity, providing an unparalleled experience that aligns with your
-                    expectations.
-                </p>
-                <p class="mt-8">
-                    Our team consists of dedicated professionals who share a profound love for adventure, ensuring that
-                    every tour becomes a memorable journey into the heart of excitement with your safety as our top
-                    priority.
-                </p>
+                <p>{{ $t('aboutUsParagraph1') }}</p>
+                <p class="mt-8">{{ $t('aboutUsParagraph2') }}</p>
             </div>
             <!-- /Paragraphs -->
         </div>
@@ -34,5 +24,4 @@
 </template>
 
 <script setup>
-
 </script>
