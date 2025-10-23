@@ -62,10 +62,6 @@
                                   class="block text-xs text-gray-400 hover:text-red-500 transition-colors">
                                 {{ $t('nav.bookNow') }}
                             </Link>
-                            <Link :href="route('about-us')"
-                                  class="block text-xs text-gray-400 hover:text-red-500 transition-colors">
-                                {{ $t('nav.aboutUs') }}
-                            </Link>
                             <Link :href="route('gallery')"
                                   class="block text-xs text-gray-400 hover:text-red-500 transition-colors">
                                 {{ $t('nav.gallery') }}
@@ -73,10 +69,6 @@
                             <Link :href="route('reviews')"
                                   class="block text-xs text-gray-400 hover:text-red-500 transition-colors">
                                 {{ $t('nav.reviews') }}
-                            </Link>
-                            <Link :href="route('faq')"
-                                  class="block text-xs text-gray-400 hover:text-red-500 transition-colors">
-                                {{ $t('nav.faq') }}
                             </Link>
                         </div>
                     </div>

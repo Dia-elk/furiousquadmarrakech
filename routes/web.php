@@ -86,10 +86,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     })->name('dashboard');
 });
 
-Route::get('/about-us',[MainController::class,'aboutUs'])->name('about-us');
+//Route::get('/about-us',[MainController::class,'aboutUs'])->name('about-us');
 Route::get('/gallery',[MainController::class,'gallery'])->name('gallery');
 Route::get('/reviews',[MainController::class,'reviews'])->name('reviews');
-Route::get('/faq',[MainController::class,'faq'])->name('faq');
 Route::get('/privacy',[MainController::class,'privacy'])->name('privacy');
 Route::get('/terms',[MainController::class,'terms'])->name('terms');
 

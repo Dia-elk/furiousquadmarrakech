@@ -110,7 +110,9 @@
                 <p class="text-sm text-neutral-300 mb-6">Had an amazing adventure with us? We'd love to hear about it!</p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <MyButton>Write a Review</MyButton>
-                    <MyButton>Plan your Ride</MyButton>
+                    <Link class="w-full" :href="route('vehicle-choice')">
+                        <MyButton >Plan your Ride</MyButton>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -161,6 +163,7 @@
 import MainLayout from "@/Layouts/MainLayout.vue";
 import MyButton from "@/Components/MyButton.vue"; // Assuming this is the path
 import { ref, computed } from 'vue';
+import {Link} from "@inertiajs/vue3";
 
 // Reactive data
 const showAllReviews = ref(false);
