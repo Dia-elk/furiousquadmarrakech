@@ -2,8 +2,8 @@
     <MainLayout>
         <!-- Hero Section -->
         <div class="relative h-screen overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-20"></div>
-            <div class="absolute inset-0 z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10"></div>
+            <div class="absolute inset-0">
                 <img
                     src="images/heroBg.jpg"
                     class="w-full h-full object-cover transform scale-110 transition-transform duration-[20s] hover:scale-105"
@@ -11,7 +11,7 @@
                 >
             </div>
 
-            <div class="relative z-30 flex h-full items-center justify-center">
+            <div class="relative z-20 flex h-full items-center justify-center">
                 <div class="text-center space-y-6 px-4">
                     <div class="space-y-2">
                         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wider">
