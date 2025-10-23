@@ -43,7 +43,7 @@ class ReservationController extends Controller
             $reservation = $reservationService->create($request, $pack, SourceEnum::FURIOUS_EN);
 
             // Sending Notification to the  owner and email to the client
-            Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
+            //Mail::to($reservation->customer->email)->send(new ReservationMail($reservation));
             Notification::route('slack', config('services.slack.reservation'))->notify(new ReservationNotification($reservation));
 
             return to_route('reservation.show', $reservation);
