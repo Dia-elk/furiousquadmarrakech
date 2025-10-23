@@ -59,10 +59,10 @@ class PackSeeder extends Seeder
         Pack::factory()->create([
             'vehicle_id' => VehicleEnum::BUGGY,
             'slug' => 'family-fun-buggy-pack',
-            'passenger_price' => 159999.99,
-            'child_price' => 79999.99,
+            'passenger_price' => 159.99,
+            'child_price' => 79.99,
             'duration' => '1/2 Day',
-            'price' => 1499999.99,
+            'price' => 1499.99,
             'name' => 'Family Fun Buggy Pack',
             'dinner' => true,
             'pictures' => true,
@@ -198,6 +198,68 @@ class PackSeeder extends Seeder
             'equipments' => true,
             'desert_scarf' => true,
             'drift' => true,
+        ]);
+
+        // BUGGY PACKS
+
+        Pack::factory()->create([
+            'vehicle_id' => VehicleEnum::CAN_AM,
+            'slug' => 'adventure-explorer-can-am-pack',
+            'passenger_price' => 159.99,
+            'child_price' => 79.99,
+            'duration' => '2h',
+            'price' => 899.99,
+            'name' => 'Adventure Explorer Can-Am Pack',
+            'dinner' => false,
+            'pictures' => true,
+            'tea' => true,
+            'pick_up' => true,
+            'private_pick_up' => false,
+            'lunch' => false,
+            'risk_insurance' => false,
+            'equipments' => true,
+            'desert_scarf' => false,
+            'drift' => false,
+        ]);
+        // *********************
+        Pack::factory()->create([
+            'vehicle_id' => VehicleEnum::CAN_AM,
+            'slug' => 'vip-can-am-safari-pack',
+            'passenger_price' => 159.99,
+            'child_price' => 79.99,
+            'duration' => '1/2 Day',
+            'price' => 1299.99,
+            'name' => 'VIP Can-Am Safari Pack',
+            'dinner' => false,
+            'pictures' => true,
+            'tea' => false,
+            'pick_up' => true,
+            'private_pick_up' => true,
+            'lunch' => true,
+            'risk_insurance' => false,
+            'equipments' => true,
+            'desert_scarf' => true,
+            'drift' => false,
+        ]);
+        // *********************
+        Pack::factory()->create([
+            'vehicle_id' => VehicleEnum::BUGGY,
+            'slug' => 'family-fun-can-am-pack',
+            'passenger_price' => 159.99,
+            'child_price' => 79.99,
+            'duration' => '1/2 Day',
+            'price' => 1499.99,
+            'name' => 'Family Fun Can-Am Pack',
+            'dinner' => true,
+            'pictures' => true,
+            'tea' => true,
+            'pick_up' => true,
+            'private_pick_up' => true,
+            'lunch' => false,
+            'risk_insurance' => true,
+            'equipments' => true,
+            'desert_scarf' => true,
+            'drift' => false,
         ]);
 
     }

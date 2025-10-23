@@ -24,5 +24,8 @@ class VehicleSeeder extends Seeder
         Vehicle::factory()->create([
             'name'=> 'MotoCross'
         ]);
+        Vehicle::factory()->create([
+            'name'=> 'CanAm'
+        ]);
     }
 }

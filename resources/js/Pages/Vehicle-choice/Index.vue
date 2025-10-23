@@ -15,7 +15,7 @@
             <div class="h-screen w-full flex flex-col lg:gap-8 gap-4 justify-center items-center absolute top-0 z-20">
                 <h1 class="lg:text-2xl font-bold text-white">{{ $t('choose_vehicle.heading') }}</h1>
                 <div class="grid lg:grid-cols-3 gap-4 ">
-                    <Link :href="route('buggy')"
+                    <Link :href="route('can-am')"
                           class="cursor-pointer flex flex-col justify-center items-center border border-neutral-600 lg:h-44 lg:w-72 h-24 w-52 transition-all duration-300"
                           :class="buggyHover?'bg-[#c10c10]':'bg-transparent'"
                           @mouseenter="buggyHover=!buggyHover"
