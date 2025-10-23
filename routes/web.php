@@ -33,12 +33,12 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
 
-    $buggyPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::BUGGY)->first();
+    $canAmPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::CAN_AM)->first();
     $quadPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::QUAD)->first();
     $motocrossPack = Pack::with('vehicle')->where('vehicle_id', VehicleEnum::MOTOCROSS)->first();
     $packs = [
         $quadPack,
-        $buggyPack,
+        $canAmPack,
         $motocrossPack,
     ];
 

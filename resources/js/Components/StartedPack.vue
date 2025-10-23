@@ -8,7 +8,7 @@
         >
             <div class="w-full h-full overflow-hidden">
                 <img
-                    :src="pack.vehicle.id === 3 ? '/images/heroMotocrossBgMobile.jpg' : pack.vehicle.id === 2 ? '/images/heroQuadBgMobile.jpg' : pack.vehicle.id === 1 ? '/images/heroBuggyBgMobile.jpg' : ''"
+                    :src="pack.vehicle.id === 3 ? '/images/heroMotocrossBgMobile.jpg' : pack.vehicle.id === 2 ? '/images/heroQuadBgMobile.jpg' : pack.vehicle.id === 4 ? '/images/heroCanAmBg.avif' : ''"
                     class="w-full h-full object-cover transition-all duration-500"
                     :class="{'scale-110': isHover}"
                     :alt="pack.vehicle.id === 3 ? $t('motocrossRideAlt') : pack.vehicle.id === 2 ? $t('quadRideAlt') : pack.vehicle.id === 1 ? $t('buggyRideAlt') : ''"
@@ -16,14 +16,14 @@
             </div>
             <div class="absolute bottom-4 w-full transition-all duration-500" :class="isHover ? 'bottom-6' : 'bottom-4'">
                 <h1 class="text-gray-100 font-bold text-center md:text-lg">
-                    {{ pack.vehicle.id === 3 ? $t('motocrossRide') : pack.vehicle.id === 2 ? $t('quadRide') : pack.vehicle.id === 1 ? $t('buggyRide') : '' }}
+                    {{ pack.vehicle.id === 3 ? $t('motocrossRide') : pack.vehicle.id === 2 ? $t('quadRide') : pack.vehicle.id === 4 ? $t('buggyRide') : '' }}
                 </h1>
             </div>
         </Link>
 
         <div class="h-[50px] flex justify-center items-center">
             <Link
-                :href="pack.vehicle.id === 3 ? route('motocross') : pack.vehicle.id === 2 ? route('quad') : pack.vehicle.id === 1 ? route('buggy') : '#'"
+                :href="pack.vehicle.id === 3 ? route('motocross') : pack.vehicle.id === 2 ? route('quad') : pack.vehicle.id === 4 ? route('can-am') : '#'"
                 class="w-full"
             >
                 <MyButton>

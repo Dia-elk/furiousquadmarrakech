@@ -243,7 +243,7 @@ class PackSeeder extends Seeder
         ]);
         // *********************
         Pack::factory()->create([
-            'vehicle_id' => VehicleEnum::BUGGY,
+            'vehicle_id' => VehicleEnum::CAN_AM,
             'slug' => 'family-fun-can-am-pack',
             'passenger_price' => 159.99,
             'child_price' => 79.99,
