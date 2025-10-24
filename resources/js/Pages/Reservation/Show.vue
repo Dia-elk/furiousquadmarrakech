@@ -43,7 +43,7 @@
 
                             <div class="flex justify-between">
                                 <p class="text-md font-medium text-gray-400">{{ $t('reservation_confirmation.total_price') }} :</p>
-                                <p class="text-sm text-gray-400">{{ reservation.total_price }} MAD</p>
+                                <p class="text-sm text-gray-400">€ {{ reservation.total_price }}</p>
                             </div>
                         </div>
 

@@ -31,7 +31,7 @@
                         <label class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-semibold">{{ $t('reservation.driver') }} (14-75 {{ $t('reservation.years_old') }})</h3>
-                                <p class="text-xs"> {{ pack.price }} Dh</p>
+                                <p class="text-xs">€ {{ pack.price }}</p>
                             </div>
                             <div class="w-36 bg-neutral-800 flex justify-between items-center">
                                 <div @click="minusDriver" class="w-full cursor-pointer flex justify-center items-center border-r border-gray-600">-</div>
@@ -47,7 +47,7 @@
                         <label class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-semibold">{{ $t('reservation.passenger') }} (10-75 {{ $t('reservation.years_old') }})</h3>
-                                <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.passenger_price }} Dh</p>
+                                <p v-if="pack.vehicle_id !== 3" class="text-xs">€ {{ pack.passenger_price }}</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">{{ $t('reservation.not_available') }}</p>
                             </div>
                             <div v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
@@ -64,7 +64,7 @@
                         <label class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-semibold">{{ $t('reservation.child') }} (5-9 {{ $t('reservation.years_old') }})</h3>
-                                <p v-if="pack.vehicle_id !== 3" class="text-xs"> {{ pack.child_price }} Dh</p>
+                                <p v-if="pack.vehicle_id !== 3" class="text-xs">€ {{ pack.child_price }}</p>
                                 <p v-if="pack.vehicle_id === 3" class="text-xs">{{ $t('reservation.not_available') }}</p>
                             </div>
                             <div v-if="pack.vehicle_id !== 3" class="w-36 bg-neutral-800 flex justify-between items-center">
